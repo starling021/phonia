@@ -59,10 +59,10 @@ echo
 cat banner/banner.txt
 echo
 
-if [[ -f ~/phonia.d ]]
+if [[ -f /etc/phonia.d ]]
 then
 
-CONF="$( cat ~/phonia.d )"
+CONF="$( cat /etc/phonia.d )"
 
 if [[ "$CONF" = "arm" ]]
 then
@@ -106,7 +106,7 @@ fi
 else
 
 read -p $'Select your architecture (amd/intel/arm) ' CONF
-echo "$CONF" >> ~/phonia.d
+echo "$CONF" >> /etc/phonia.d
 sleep 1
 
 if [[ "$CONF" = "arm" ]]
@@ -171,10 +171,10 @@ echo
 cat banner/banner.txt
 echo
 
-if [[ -f ~/phonia.d ]]
+if [[ -f /etc/phonia.d ]]
 then
 
-CONF="$( cat ~/phonia.d )"
+CONF="$( cat /etc/phonia.d )"
 
 if [[ "$CONF" = "arm" ]]
 then
@@ -218,7 +218,7 @@ fi
 else
 
 read -p $'Select your architecture (amd/intel/arm) ' CONF
-echo "$CONF" >> ~/phonia.d
+echo "$CONF" >> /etc/phonia.d
 sleep 1
 
 if [[ "$CONF" = "arm" ]]
