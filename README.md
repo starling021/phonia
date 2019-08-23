@@ -91,7 +91,7 @@
 
 > If you want to start basic scan, run
     
-    phonia -n 15554443333
+    phonia -n <phone number>
     
 > If you want to start list scan, run
 
@@ -99,7 +99,7 @@
     
 > If you want to get number footprints, run
 
-    phonia -n 15554443333 -s footprints
+    phonia -n <phone number> -s footprints
 
 # Terms of use
 
