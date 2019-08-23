@@ -91,15 +91,15 @@
 
 > If you want to start basic scan, run
     
-    phonia -n 19253130019
+    phonia -n <number>
     
 > If you want to start list scan, run
 
-    phonia -i input.txt -o output.txt
+    phonia -i <list>
     
 > If you want to get number footprints, run
 
-    phonia -n 19253130019 -s footprints
+    phonia -n <number> -s footprints
 
 # Terms of use
 
