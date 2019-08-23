@@ -99,7 +99,7 @@
     
 > If you want to get number footprints, run
 
-    phonia -n <phone number> -s footprints
+    phonia -n <number> -s footprints
 
 # Terms of use
 
