@@ -93,7 +93,7 @@
     
     phonia -n <number>
     
-> If you want to start list scan, run
+> If you want to scan numbers from list, run
 
     phonia -i <list>
     
