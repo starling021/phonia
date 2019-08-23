@@ -91,7 +91,7 @@
 
 > If you want to start basic scan, run
     
-    phonia -n <phone number>
+    phonia -n <number>
     
 > If you want to start list scan, run
 
