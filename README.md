@@ -95,11 +95,11 @@
     
 > If you want to scan numbers from list, run
 
-    phonia -i <list>
+    phonia -i <input_file> 
     
-> If you want to get number footprints, run
+> If you want to get select number scanner, run
 
-    phonia -n <number> -s footprints
+    phonia -n <number> -s <scanner>
 
 # Terms of use
 
