@@ -76,9 +76,9 @@
       -h, --help            show this help message and exit
       -n NUMBER, --number NUMBER
                             The phone number to scan.
-      -i INPUT_FILE, --input INPUT_FILE
+      -i INPUTFILE, --input INPUT_FILE
                             Phone number list to scan.
-      -o OUTPUT_FILE, --output OUTPUT_FILE
+      -o OUTPUTFILE, --output OUTPUT_FILE
                             Output to save scan results.
       -s SCANNER, --scanner SCANNER
                             The scanner to use.
@@ -95,7 +95,7 @@
     
 > If you want to scan numbers from list, run
 
-    phonia -i INPUT_FILE -o OUTPUT_FILE
+    phonia -i INPUTFILE -o OUTPUTFILE
     
 > If you want to select number scanner, run
 
