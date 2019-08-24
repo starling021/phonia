@@ -70,17 +70,17 @@
 
 > phonia -h
 
-    usage: phonia -n <number> [options]
+    usage: phonia -n NUMBER [OPTIONS...]
 
     optional arguments:
       -h, --help            show this help message and exit
-      -n number, --number number
+      -n NUMBER, --number NUMBER
                             The phone number to scan.
-      -i input_file, --input input_file
+      -i INPUTFILE, --input INPUTFILE
                             Phone number list to scan.
-      -o output_file, --output output_file
+      -o OUTPUTFILE, --output OUTPUTFILE
                             Output to save scan results.
-      -s scanner, --scanner scanner
+      -s SCANNER, --scanner SCANNER
                             The scanner to use.
       --recon               Launch custom format reconnaissance.
       --no-ansi             Disable colored output.
