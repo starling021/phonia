@@ -91,15 +91,15 @@
 
 > If you want to start basic scan, run
     
-    phonia -n <number>
+    phonia -n NUMBER
     
 > If you want to scan numbers from list, run
 
-    phonia -i <input_file> -o <output_file>
+    phonia -i INPUTFILE -o OUTPUTFILE
     
-> If you want to get number footprints, run
+> If you want to select number scanner, run
 
-    phonia -n <number> -s footprints
+    phonia -n NUMBER -s SCANNER
 
 # Terms of use
 
