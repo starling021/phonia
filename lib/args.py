@@ -14,7 +14,7 @@ parser.add_argument('-i', '--input', dest="input_file", type=argparse.FileType('
 parser.add_argument('-o', '--output', dest="outputfile", type=argparse.FileType('w'),
                     help='Output to save scan results.')
 
-parser.add_argument('-s', '--scanner', metavar="scanner", default="all", type=str,
+parser.add_argument('-s', '--scanner', dest="scanner", default="all", type=str,
                     help='The scanner to use.')
 
 parser.add_argument('--recon', action='store_true',
