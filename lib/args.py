@@ -11,7 +11,7 @@ parser.add_argument('-n', '--number', metavar='number', type=str,
 parser.add_argument('-i', '--input', metavar="input_file", type=argparse.FileType('r'),
                     help='Phone number list to scan.')
 
-parser.add_argument('-o', '--output', metavar="output_file", type=argparse.FileType('w'),
+parser.add_argument('-o', '--output', dist="outputfile", type=argparse.FileType('w'),
                     help='Output to save scan results.')
 
 parser.add_argument('-s', '--scanner', metavar="scanner", default="all", type=str,
