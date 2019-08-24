@@ -3,12 +3,12 @@
 import argparse
 from lib.banner import __version__
 
-parser = argparse.ArgumentParser(usage='%(prog)s -n <number> [options]')
+parser = argparse.ArgumentParser(usage='%(prog)s -n NUMBER [OPTIONS...]')
 
-parser.add_argument('-n', '--number', metavar='number', type=str,
+parser.add_argument('-n', '--number', dest='number', type=str,
                     help='The phone number to scan.')
 
-parser.add_argument('-i', '--input', metavar="input_file", type=argparse.FileType('r'),
+parser.add_argument('-i', '--input', dest="input_file", type=argparse.FileType('r'),
                     help='Phone number list to scan.')
 
 parser.add_argument('-o', '--output', dest="outputfile", type=argparse.FileType('w'),
