@@ -89,15 +89,15 @@
 
 # Phonia toolkit examples
 
-> If you want to start basic scan, run
+> Example of the phonia basic scan
     
     phonia -n 15554443333
     
-> If you want to start list scan, run
+> Example of the scanning from a file
 
     phonia -i input.txt -o output.txt
     
-> If you want to get number footprints, run
+> Example of the selecting number scanner
 
     phonia -n 15554443333 -s footprints
 
