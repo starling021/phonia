@@ -70,17 +70,17 @@
 
 > phonia -h
 
-    usage: phonia -n NUMBER [OPTIONS...]
+    usage: phonia -n <number> [options]
 
     optional arguments:
       -h, --help            show this help message and exit
-      -n NUMBER, --number NUMBER
+      -n number, --number number
                             The phone number to scan.
-      -i INPUTFILE, --input INPUTFILE
+      -i input_file, --input input_file
                             Phone number list to scan.
-      -o OUTPUTFILE, --output OUTPUTFILE
+      -o output_file, --output output_file
                             Output to save scan results.
-      -s SCANNER, --scanner SCANNER
+      -s scanner, --scanner scanner
                             The scanner to use.
       --recon               Launch custom format reconnaissance.
       --no-ansi             Disable colored output.
@@ -91,15 +91,15 @@
 
 > If you want to start basic scan, run
     
-    phonia -n NUMBER
+    phonia -n <number>
     
 > If you want to scan numbers from list, run
 
-    phonia -i INPUTFILE -o OUTPUTFILE
+    phonia -i <list>
     
-> If you want to select number scanner, run
+> If you want to get number footprints, run
 
-    phonia -n NUMBER -s SCANNER
+    phonia -n <number> -s footprints
 
 # Terms of use
 
