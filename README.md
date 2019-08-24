@@ -76,9 +76,9 @@
       -h, --help            show this help message and exit
       -n NUMBER, --number NUMBER
                             The phone number to scan.
-      -i INPUTFILE, --input INPUT_FILE
+      -i INPUTFILE, --input INPUTFILE
                             Phone number list to scan.
-      -o OUTPUTFILE, --output OUTPUT_FILE
+      -o OUTPUTFILE, --output OUTPUTFILE
                             Output to save scan results.
       -s SCANNER, --scanner SCANNER
                             The scanner to use.
