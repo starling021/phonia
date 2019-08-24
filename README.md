@@ -95,7 +95,7 @@
     
 > If you want to scan numbers from list, run
 
-    phonia -i <list>
+    phonia -i <input_file> -o <output_file>
     
 > If you want to get number footprints, run
 
