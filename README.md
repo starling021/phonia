@@ -15,7 +15,7 @@
   <a href="https://github.com/entynetproject/phonia/releases">
     <img src="https://img.shields.io/github/release/entynetproject/phonia.svg">
   </a>
-  <a href="https://ru.m.wikipedia.org/wiki/Python">
+  <a href="https://wikipedia.org/wiki/Python_(programming_language)">
     <img src="https://img.shields.io/badge/language-python-blue.svg">
  </a>
   <a href="https://github.com/entynetproject/phonia">
@@ -27,7 +27,7 @@
   <a href="https://github.com/entynetproject/phonia/wiki">
       <img src="https://img.shields.io/badge/wiki%20-phonia-lightgrey.svg">
  </a>
-  <a href="https://mobile.twitter.com/entynetproject">
+  <a href="https://twitter.com/entynetproject">
     <img src="https://img.shields.io/badge/twitter-entynetproject-blue.svg">
  </a>
 </p>
@@ -37,7 +37,7 @@
     Name      : Phonia Toolkit
     Developer : Entynetproject
     Version   : v1.4 (phonia-v1.4-dev)
-    Gather    : PNI (phone number information)
+    Gather    : PNI (Phone Number Information)
     Site      : http://entynetproject.simplesite.com/
 
 # About phonia toolkit
