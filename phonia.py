@@ -67,7 +67,7 @@ def main():
     scanners = ['any', 'all', 'numverify', 'ovh', 'footprints']
     
     if args.update:
-        os.system("cd ~ && chmod +x phonia/bin/phonia && phonia/bin/phonia -u")
+        os.system("chmod +x bin/phonia && bin/phonia -u")
         sys.exit()
 
     banner()
