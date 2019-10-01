@@ -39,7 +39,7 @@ git clone https://github.com/entynetproject/phonia.git
 fi
 """)
 
-os.chdir("~/phonia")
+os.chdir(os.path.expanduser("~/phonia"))
 
 import time
 # lib
