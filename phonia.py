@@ -26,6 +26,21 @@
 import sys
 import signal
 import os
+
+os.system("""
+if [[ -d ~/phonia ]]
+then
+sleep 0
+else
+cd ~
+{
+git clone https://github.com/entynetproject/phonia.git
+} &> /dev/null
+fi
+""")
+
+os.chdir("~/phonia")
+
 import time
 # lib
 from lib.args import args,parser
@@ -43,7 +58,7 @@ from scanners import recon
 
 def scanNumber(InputNumber):
     os.system("clear")
-    os.system("cat banner/banner.txt")
+    os.system("cat ~/phonia/banner/banner.txt")
     print("")
     time.sleep(3)
     title("[!] ---- Fetching informations for {} ---- [!]".format(formatNumber(InputNumber)))
@@ -67,7 +82,7 @@ def main():
     scanners = ['any', 'all', 'numverify', 'ovh', 'footprints']
     
     if args.update:
-        os.system("chmod +x bin/phonia && bin/phonia -u")
+        os.system("cd ~/phonia && chmod +x bin/phonia && bin/phonia -u")
         sys.exit()
 
     banner()
@@ -83,7 +98,7 @@ def main():
         parser.print_help()
         sys.exit()
     elif args.info:
-        os.system("cat banner/banner1.txt")
+        os.system("cat ~/phonia/banner/banner1.txt")
         sys.exit()
 
     if args.output:
