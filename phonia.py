@@ -27,20 +27,6 @@ import sys
 import signal
 import os
 
-os.system("""
-if [[ -d ~/phonia ]]
-then
-sleep 0
-else
-cd ~
-{
-git clone https://github.com/entynetproject/phonia.git
-} &> /dev/null
-fi
-""")
-
-os.chdir(os.path.expanduser("~/phonia"))
-
 import time
 # lib
 from lib.args import args,parser
