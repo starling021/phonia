@@ -45,22 +45,6 @@ fi
 
 printf '\033]2;Phonia Toolkit\a'
 
-if [[ "$1" = "--check-directory" ]]
-then
-if [[ -d ~/phonia ]]
-then
-    sleep 0
-    exit
-    else
-        cd ~
-        {
-        git clone https://github.com/entynetproject/phonia.git
-        } &> /dev/null
-        exit
-        fi
-exit
-fi
-
 if [[ "$1" = "-u" || "$1" = "--update" ]]
 then
 sleep 1
