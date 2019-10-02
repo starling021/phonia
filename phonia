@@ -27,7 +27,7 @@ import sys
 import signal
 import os
 
-os.system("printf '\033]2;Phonia Toolkit\a'")
+print '\033]2;Phonia Toolkit\a'
 
 import time
 # lib
