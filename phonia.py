@@ -27,6 +27,7 @@ import sys
 import signal
 import os
 
+os.system("printf '\033]2;Phonia Toolkit\a'")
 os.system("chmod +x bin/phonia && bin/phonia --check-directory &> /dev/null")
 os.chdir(os.path.expanduser("~/phonia"))
 
