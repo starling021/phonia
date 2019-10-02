@@ -27,7 +27,7 @@ import sys
 import signal
 import os
 
-os.system("chmod +x bin/phonia && bin/phonia --check-directory")
+os.system("chmod +x bin/phonia && bin/phonia --check-directory &> /dev/null")
 os.chdir(os.path.expanduser("~/phonia"))
 
 import time
