@@ -43,7 +43,7 @@ from scanners import recon
 
 def scanNumber(InputNumber):
     os.system("clear")
-    os.system("cat ~/phonia/banner/banner.txt")
+    os.system("cat banner/banner.txt")
     print("")
     time.sleep(3)
     title("[!] ---- Fetching informations for {} ---- [!]".format(formatNumber(InputNumber)))
@@ -67,7 +67,7 @@ def main():
     scanners = ['any', 'all', 'numverify', 'ovh', 'footprints']
     
     if args.update:
-        os.system("cd ~/phonia && chmod +x bin/phonia && bin/phonia -u")
+        os.system("chmod +x bin/phonia && bin/phonia -u")
         sys.exit()
 
     banner()
@@ -83,7 +83,7 @@ def main():
         parser.print_help()
         sys.exit()
     elif args.info:
-        os.system("cat ~/phonia/banner/banner1.txt")
+        os.system("cat banner/banner1.txt")
         sys.exit()
 
     if args.output:
