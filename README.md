@@ -32,14 +32,6 @@
  </a>
 </p>
 
-# Phonia toolkit details
-
-    Name      : Phonia Toolkit
-    Developer : Entynetproject
-    Version   : v1.4 (phonia-v1.4-dev)
-    Gather    : PNI (Phone Number Information)
-    Site      : http://entynetproject.simplesite.com/
-
 # About phonia toolkit
 
     INFO: Phonia Toolkit is one of the most advanced toolkits to scan 
@@ -85,8 +77,7 @@
       --recon               Launch custom format reconnaissance.
       --no-ansi             Disable colored output.
       -u, --update          Update Phonia Toolkit.
-      --details             Show Phonia Toolkit credits.
-
+  
 # Phonia toolkit examples
 
 > Example of the phonia basic scan
