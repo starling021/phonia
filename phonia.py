@@ -23,12 +23,12 @@
 # SOFTWARE.
 
 # dependencies
-import sys
-import signal
 import os
 
-print "\033]2;Phonia Toolkit\a"
+os.system("printf '\033]2;Phonia Toolkit\a'")
 
+import sys
+import signal
 import time
 # lib
 from lib.args import args,parser
