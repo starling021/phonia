@@ -55,9 +55,12 @@ rm /bin/phonia
 rm /usr/local/bin/phonia
 cd ~
 git clone https://github.com/entynetproject/phonia.git
-cd phonia
-chmod +x install.sh
-./install.sh
+cd phonia/bin
+cp phonia /bin
+cp phonia /usr/local/bin
+chmod +x /bin/phonia
+chmod +x /usr/local/bin/phonia
+cd ~/phonia
 } &> /dev/null
 echo ""$GNS"Successfully updated..."$CE""
 sleep 1
