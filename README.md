@@ -32,7 +32,7 @@
  </a>
 </p>
 
-# Phonia toolkit credits
+# Phonia toolkit details
 
     Name      : Phonia Toolkit
     Developer : Entynetproject
@@ -85,7 +85,7 @@
       --recon               Launch custom format reconnaissance.
       --no-ansi             Disable colored output.
       -u, --update          Update Phonia Toolkit.
-      --info                Show Phonia Toolkit credits.
+      --details             Show Phonia Toolkit credits.
 
 # Phonia toolkit examples
 
