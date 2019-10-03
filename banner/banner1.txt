@@ -1,6 +1,0 @@
-   Name      : Phonia Toolkit
-   Developer : Entynetproject
-   Version   : v1.4 (phonia-v1.4-dev)
-   Gather    : PNI (Phone Number Information)
-   Site      : http://entynetproject.simplesite.com/
-   
