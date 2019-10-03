@@ -70,7 +70,9 @@ then
 {
 cd ~/phonia
 } &> /dev/null
-python3 ~/phonia/phonia $1 $2 $3 $4 $5 $6 $7 $8 $9
+mv phonia.py phonia
+python3 phonia $1 $2 $3 $4 $5 $6 $7 $8 $9
+mv phonia phonia.py
 else
 {
 ASESR="$( timeout -s SIGTERM 40 curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
@@ -82,7 +84,9 @@ cd ~
 git clone https://github.com/entynetproject/phonia.git
 cd ~/phonia
 } &> /dev/null
-python3 ~/phonia/phonia $1 $2 $3 $4 $5 $6 $7 $8 $9
+mv phonia.py phonia
+python3 phonia $1 $2 $3 $4 $5 $6 $7 $8 $9
+mv phonia phonia.py
 else
 cd ~
 sleep 1
