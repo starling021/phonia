@@ -85,7 +85,7 @@ def main():
     if not len(sys.argv) > 1:
         parser.print_help()
         sys.exit()
-    elif args.info:
+    elif args.details:
         os.system("cat banner/banner1.txt")
         sys.exit()
 
