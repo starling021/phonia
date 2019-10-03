@@ -26,7 +26,4 @@ parser.add_argument('--no-ansi', action='store_true',
 parser.add_argument('-u', '--update', action='store_true',
                     help='Update Phonia Toolkit.')
 
-parser.add_argument('--details', action='store_true',
-                    help='Show Phonia Toolkit details.')
-
 args = parser.parse_args()
