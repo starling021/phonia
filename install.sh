@@ -86,9 +86,9 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
+apt-get --yes --force-yes install python3
+apt-get --yes --force-yes install python3-pip
+apt-get --yes --force-yes install wget
 fi
 fi
 
@@ -100,9 +100,9 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
+apt-get --yes --force-yes install python3
+apt-get --yes --force-yes install python3-pip
+apt-get --yes --force-yes install wget
 fi
 fi
 
@@ -139,9 +139,9 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
+apt-get --yes --force-yes install python3
+apt-get --yes --force-yes install python3-pip
+apt-get --yes --force-yes install wget
 fi
 fi
 
@@ -153,9 +153,9 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
+apt-get --yes --force-yes install python3
+apt-get --yes --force-yes install python3-pip
+apt-get --yes --force-yes install wget
 fi
 fi
 fi
@@ -209,9 +209,9 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
+apt-get --yes --force-yes install python3
+apt-get --yes --force-yes install python3-pip
+apt-get --yes --force-yes install wget
 fi
 fi
 
@@ -223,9 +223,9 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
+apt-get --yes --force-yes install python3
+apt-get --yes --force-yes install python3-pip
+apt-get --yes --force-yes install wget
 fi
 fi
 
@@ -262,9 +262,9 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
+apt-get --yes --force-yes install python3
+apt-get --yes --force-yes install python3-pip
+apt-get --yes --force-yes install wget
 fi
 fi
 
@@ -276,9 +276,9 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
+apt-get --yes --force-yes install python3
+apt-get --yes --force-yes install python3-pip
+apt-get --yes --force-yes install wget
 fi
 fi
 fi
@@ -291,6 +291,7 @@ pip3 install -r requirements.txt
 
 fi
 
+{
 if [[ -f /etc/phonia.d ]]
 then
 wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
@@ -305,3 +306,4 @@ fi
 else
 exit
 fi
+} &> /dev/null
