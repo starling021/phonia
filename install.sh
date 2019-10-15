@@ -63,6 +63,7 @@ if [[ -f /etc/phonia.conf ]]
 then
 
 CONF="$( cat /etc/phonia.conf )"
+sleep 1
 
 if [[ "$CONF" = "arm" ]]
 then
@@ -186,6 +187,7 @@ if [[ -f /etc/phonia.conf ]]
 then
 
 CONF="$( cat /etc/phonia.conf )"
+sleep 1
 
 if [[ "$CONF" = "arm" ]]
 then
