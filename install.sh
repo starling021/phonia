@@ -59,10 +59,10 @@ echo
 cat banner/banner.txt
 echo
 
-if [[ -f /etc/phonia.d ]]
+if [[ -f /etc/phonia.conf ]]
 then
 
-CONF="$( cat /etc/phonia.d )"
+CONF="$( cat /etc/phonia.conf )"
 
 if [[ "$CONF" = "arm" ]]
 then
@@ -113,7 +113,7 @@ if [[ "$CONF" = "" ]]
 then
 exit
 else
-echo "$CONF" >> /etc/phonia.d
+echo "$CONF" >> /etc/phonia.conf
 fi
 sleep 1
 
@@ -182,10 +182,10 @@ echo
 cat banner/banner.txt
 echo
 
-if [[ -f /etc/phonia.d ]]
+if [[ -f /etc/phonia.conf ]]
 then
 
-CONF="$( cat /etc/phonia.d )"
+CONF="$( cat /etc/phonia.conf )"
 
 if [[ "$CONF" = "arm" ]]
 then
@@ -236,7 +236,7 @@ if [[ "$CONF" = "" ]]
 then
 exit
 else
-echo "$CONF" >> /etc/phonia.d
+echo "$CONF" >> /etc/phonia.conf
 fi
 sleep 1
 
@@ -292,7 +292,7 @@ pip3 install -r requirements.txt
 fi
 
 {
-if [[ -f /etc/phonia.d ]]
+if [[ -f /etc/phonia.conf ]]
 then
 wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
 if [[ -d /System/Library/CoreServices/Finder.app ]]
