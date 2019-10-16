@@ -46,12 +46,11 @@ cat banner/banner.txt
 echo
 sleep 0.5
 echo -e ""$R"Uninstalling Phonia Toolkit..."$CE""
-sleep 1
-echo -e ""$R"Uninstalling installed dependencies..."$CE""
-sleep 3
 
 {
 rm -r ~/phonia
 rm /bin/phonia
 rm /usr/local/bin/phonia
 } &> /dev/null
+sleep 3
+cd
