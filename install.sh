@@ -108,7 +108,17 @@ if [[ "$CONF" = "" ]]
 then
 exit
 else
+if [[ "$CONF" = "arm" ]]
+then
+read -e -p $'Is this a single board computer [yes/no]? ' PI
+if [[ "$PI" = "yes" ]]
+then
+echo "amd" >> /etc/phonia.conf
+CONF="amd"
+else
 echo "$CONF" >> /etc/phonia.conf
+fi
+fi
 fi
 sleep 1
 
@@ -231,8 +241,17 @@ read -e -p $'Select your architecture (amd/intel/arm): ' CONF
 if [[ "$CONF" = "" ]]
 then
 exit
+if [[ "$CONF" = "arm" ]]
+then
+read -e -p $'Is this a single board computer [yes/no]? ' PI
+if [[ "$PI" = "yes" ]]
+then
+echo "amd" >> /etc/phonia.conf
+CONF="amd"
 else
 echo "$CONF" >> /etc/phonia.conf
+fi
+fi
 fi
 sleep 1
 
