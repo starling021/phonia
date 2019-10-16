@@ -110,7 +110,7 @@ exit
 else
 if [[ "$CONF" = "arm" ]]
 then
-read -e -p $'Is this a single board computer [yes/no]? ' PI
+read -e -p $'Is this a single board computer (yes/no)? ' PI
 if [[ "$PI" = "yes" ]]
 then
 echo "amd" >> /etc/phonia.conf
@@ -243,7 +243,7 @@ then
 exit
 if [[ "$CONF" = "arm" ]]
 then
-read -e -p $'Is this a single board computer [yes/no]? ' PI
+read -e -p $'Is this a single board computer (yes/no)? ' PI
 if [[ "$PI" = "yes" ]]
 then
 echo "amd" >> /etc/phonia.conf
