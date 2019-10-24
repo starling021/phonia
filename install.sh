@@ -39,157 +39,31 @@ then
    sleep 1
    exit
 fi
-
 if [[ -d ~/phonia ]]
 then
 cd ~/phonia/bin
 {
-cp phonia /bin
 cp phonia /usr/local/bin
-chmod +x /bin/phonia
 chmod +x /usr/local/bin/phonia
-cd ~/phonia
+cp phonia /bin
+chmod +x /bin/phonia
 } &> /dev/null
-sleep 0.5
-clear
-sleep 0.5
-echo
-cat banner/banner.txt
-echo
-
-if [[ -f /etc/phonia.conf ]]
-then
-
-CONF="$( cat /etc/phonia.conf )"
-sleep 1
-
-if [[ "$CONF" = "arm" ]]
-then
-if [[ -d /System/Library/CoreServices/SpringBoard.app ]]
-then
-echo ""$BS"Installing dependencies..."$CE""
-else 
-echo ""$BS"Installing dependencies..."$CE""
-pkg update
-pkg install python3
-pkg install python3-pip
-pkg install wget
-fi
-fi
-
-if [[ "$CONF" = "amd" ]]
-then
-if [[ -d /System/Library/CoreServices/Finder.app ]]
-then
-echo ""$BS"Installing dependencies..."$CE""
-else
-echo ""$BS"Installing dependencies..."$CE""
-apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
-fi
-fi
-
-if [[ "$CONF" = "intel" ]]
-then
-if [[ -d /System/Library/CoreServices/Finder.app ]]
-then
-echo ""$BS"Installing dependencies..."$CE""
-else
-echo ""$BS"Installing dependencies..."$CE""
-apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
-fi
-fi
-
-else
-
-read -e -p $'Select your architecture (amd/intel/arm): ' CONF
-if [[ "$CONF" = "" ]]
-then
-exit
-else
-if [[ "$CONF" = "arm" ]]
-then
-read -e -p $'Is this a single board computer (yes/no)? ' PI
-if [[ "$PI" = "yes" ]]
-then
-echo "amd" >> /etc/phonia.conf
-CONF="amd"
-else
-echo "$CONF" >> /etc/phonia.conf
-fi
-fi
-fi
-sleep 1
-
-if [[ "$CONF" = "arm" ]]
-then
-if [[ -d /System/Library/CoreServices/SpringBoard.app ]]
-then
-echo ""$BS"Installing dependencies..."$CE""
-else 
-echo ""$BS"Installing dependencies..."$CE""
-pkg update
-pkg install python3
-pkg install python3-pip
-pkg install wget
-fi
-fi
-
-if [[ "$CONF" = "amd" ]]
-then
-if [[ -d /System/Library/CoreServices/Finder.app ]]
-then
-echo ""$BS"Installing dependencies..."$CE""
-else
-echo ""$BS"Installing dependencies..."$CE""
-apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
-fi
-fi
-
-if [[ "$CONF" = "intel" ]]
-then
-if [[ -d /System/Library/CoreServices/Finder.app ]]
-then
-echo ""$BS"Installing dependencies..."$CE""
-else
-echo ""$BS"Installing dependencies..."$CE""
-apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
-fi
-fi
-fi
-
-{
-cp config.example.py config.py
-pip3 install setuptools
-pip3 install -r requirements.txt
-} &> /dev/null
-
 else
 cd ~
 {
 git clone https://github.com/entynetproject/phonia.git
 cd ~/phonia/bin
-cp phonia /bin
 cp phonia /usr/local/bin
-chmod +x /bin/phonia
 chmod +x /usr/local/bin/phonia
-cd ~/phonia
+cp phonia /bin
+chmod +x /bin/phonia
 } &> /dev/null
+fi
 sleep 0.5
 clear
 sleep 0.5
-echo
+echo  
+cd ~/phonia
 cat banner/banner.txt
 echo
 
@@ -242,11 +116,11 @@ fi
 fi
 
 else
-
 read -e -p $'Select your architecture (amd/intel/arm): ' CONF
 if [[ "$CONF" = "" ]]
 then
 exit
+else
 if [[ "$CONF" = "arm" ]]
 then
 read -e -p $'Is this a single board computer (yes/no)? ' PI
@@ -271,8 +145,7 @@ echo ""$BS"Installing dependencies..."$CE""
 pkg update
 pkg install python3
 pkg install python3-pip
-pkg install wget
-fi
+pkg install wgetfi
 fi
 
 if [[ "$CONF" = "amd" ]]
@@ -309,8 +182,6 @@ cp config.example.py config.py
 pip3 install setuptools
 pip3 install -r requirements.txt
 } &> /dev/null
-
-fi
 
 {
 if [[ -f /etc/phonia.conf ]]
