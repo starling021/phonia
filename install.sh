@@ -47,6 +47,8 @@ cp phonia /usr/local/bin
 chmod +x /usr/local/bin/phonia
 cp phonia /bin
 chmod +x /bin/phonia
+cp phonia /data/data/com.termux/files/usr/bin
+chmod +x /data/data/com.termux/files/usr/bin/phonia
 } &> /dev/null
 else
 cd ~
@@ -57,6 +59,8 @@ cp phonia /usr/local/bin
 chmod +x /usr/local/bin/phonia
 cp phonia /bin
 chmod +x /bin/phonia
+cp phonia /data/data/com.termux/files/usr/bin
+chmod +x /data/data/com.termux/files/usr/bin/phonia
 } &> /dev/null
 fi
 sleep 0.5
