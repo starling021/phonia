@@ -41,7 +41,8 @@ then
 fi
 
 {
-rm -r ~/phonia
+rm -rf ~/phonia
 rm /bin/phonia
 rm /usr/local/bin/phonia
+rm /data/data/com.termux/files/usr/bin/phonia
 } &> /dev/null
