@@ -63,14 +63,9 @@ rm /usr/local/bin/phonia
 rm /data/data/com.termux/files/usr/bin/phonia
 cd ~
 git clone https://github.com/entynetproject/phonia.git
-cd phonia/bin
-cp phonia /bin
-cp phonia /usr/local/bin
-cp phonia /data/data/com.termux/files/usr/bin
-chmod +x /bin/phonia
-chmod +x /usr/local/bin/phonia
-chmod +x /data/data/com.termux/files/usr/bin/phonia
 cd ~/phonia
+chmod +x install.sh
+./install.sh
 } &> /dev/null
 echo ""$GNS"Successfully updated..."$CE""
 sleep 1
