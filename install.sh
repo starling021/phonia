@@ -81,9 +81,9 @@ echo ""$BS"Installing dependencies..."$CE""
 else 
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
-pkg install python3
-pkg install python3-pip
-pkg install wget
+pkg -y install python3
+pkg -y install python3-pip
+pkg -y install wget
 fi
 fi
 
@@ -95,9 +95,9 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
+apt-get -y install python3
+apt-get -y install python3-pip
+apt-get -y install wget
 fi
 fi
 
@@ -109,9 +109,9 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
+apt-get -y install python3
+apt-get -y install python3-pip
+apt-get -y install wget
 fi
 fi
 
@@ -143,9 +143,9 @@ echo ""$BS"Installing dependencies..."$CE""
 else 
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
-pkg install python3
-pkg install python3-pip
-pkg install wgetfi
+pkg -y install python3
+pkg -y install python3-pip
+pkg -y install wgetfi
 fi
 
 if [[ "$CONF" = "amd" ]]
@@ -156,9 +156,9 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
+apt-get -y install python3
+apt-get -y install python3-pip
+apt-get -y install wget
 fi
 fi
 
@@ -170,9 +170,9 @@ echo ""$BS"Installing dependencies..."$CE""
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
-apt-get install python3
-apt-get install python3-pip
-apt-get install wget
+apt-get -y install python3
+apt-get -y install python3-pip
+apt-get -y install wget
 fi
 fi
 fi
