@@ -151,6 +151,7 @@ pkg -y install python3
 pkg -y install python3-pip
 pkg -y install wgetfi
 fi
+fi
 
 if [[ "$CONF" = "amd" ]]
 then
