@@ -53,7 +53,7 @@ ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's
 if [[ "$ASESR" != "" ]]
 then 
 sleep 1
-echo ""$RS"Installation failed!"$CE""
+echo ""$RS"Download failed!"$CE""
 sleep 1
 exit
 fi
@@ -77,7 +77,7 @@ cd ~/phonia
 chmod +x install.sh
 ./install.sh
 } &> /dev/null
-echo ""$GNS"Successfully updated..."$CE""
+echo ""$GNS"Successfully updated!"$CE""
 sleep 1
 exit
 fi
