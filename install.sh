@@ -135,6 +135,8 @@ CONF="amd"
 else
 echo "$CONF" >> /etc/phonia.conf
 fi
+else
+echo "$CONF" >> /etc/phonia.conf
 fi
 fi
 sleep 1
@@ -149,7 +151,7 @@ echo ""$BS"Installing dependencies..."$CE""
 pkg update
 pkg -y install python3
 pkg -y install python3-pip
-pkg -y install wgetfi
+pkg -y install wget
 fi
 fi
 
