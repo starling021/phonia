@@ -42,6 +42,7 @@ fi
 
 {
 rm -rf ~/phonia
+rm /etc/phonia.conf
 rm /bin/phonia
 rm /usr/local/bin/phonia
 rm /data/data/com.termux/files/usr/bin/phonia
