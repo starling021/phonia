@@ -82,6 +82,12 @@ then
 if [[ -d /System/Library/CoreServices/SpringBoard.app ]]
 then
 echo ""$BS"Installing dependencies..."$CE""
+{
+if ! which pip3 > /dev/null; then
+	wget https://bootstrap.pypa.io/get-pip.py
+	python3 get-pip.py
+fi
+} &> /dev/null
 else 
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
@@ -96,6 +102,12 @@ then
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
 echo ""$BS"Installing dependencies..."$CE""
+{
+if ! which pip3 > /dev/null; then
+	wget https://bootstrap.pypa.io/get-pip.py
+	python3 get-pip.py
+fi
+} &> /dev/null
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
@@ -110,6 +122,12 @@ then
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
 echo ""$BS"Installing dependencies..."$CE""
+{
+if ! which pip3 > /dev/null; then
+	wget https://bootstrap.pypa.io/get-pip.py
+	python3 get-pip.py
+fi
+} &> /dev/null
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
@@ -146,6 +164,12 @@ then
 if [[ -d /System/Library/CoreServices/SpringBoard.app ]]
 then
 echo ""$BS"Installing dependencies..."$CE""
+{
+if ! which pip3 > /dev/null; then
+	wget https://bootstrap.pypa.io/get-pip.py
+	python3 get-pip.py
+fi
+} &> /dev/null
 else 
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
@@ -160,6 +184,12 @@ then
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
 echo ""$BS"Installing dependencies..."$CE""
+{
+if ! which pip3 > /dev/null; then
+	wget https://bootstrap.pypa.io/get-pip.py
+	python3 get-pip.py
+fi
+} &> /dev/null
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
@@ -174,6 +204,12 @@ then
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
 echo ""$BS"Installing dependencies..."$CE""
+{
+if ! which pip3 > /dev/null; then
+	wget https://bootstrap.pypa.io/get-pip.py
+	python3 get-pip.py
+fi
+} &> /dev/null
 else
 echo ""$BS"Installing dependencies..."$CE""
 apt-get update
