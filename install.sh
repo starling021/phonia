@@ -92,6 +92,7 @@ echo ""$BS"Installing dependencies..."$CE""
 pkg update
 pkg -y install python
 pkg -y install wget
+pkg -y install termux-exec
 fi
 fi
 
@@ -170,6 +171,7 @@ echo ""$BS"Installing dependencies..."$CE""
 pkg update
 pkg -y install python
 pkg -y install wget
+pkg -y install termux-exec
 fi
 fi
 
