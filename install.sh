@@ -41,26 +41,11 @@ then
 fi
 if [[ -d ~/phonia ]]
 then
-cd ~/phonia/bin
-{
-cp phonia /usr/local/bin
-chmod +x /usr/local/bin/phonia
-cp phonia /bin
-chmod +x /bin/phonia
-cp phonia /data/data/com.termux/files/usr/bin
-chmod +x /data/data/com.termux/files/usr/bin/phonia
-} &> /dev/null
+sleep 0
 else
 cd ~
 {
 git clone https://github.com/entynetproject/phonia.git
-cd ~/phonia/bin
-cp phonia /usr/local/bin
-chmod +x /usr/local/bin/phonia
-cp phonia /bin
-chmod +x /bin/phonia
-cp phonia /data/data/com.termux/files/usr/bin
-chmod +x /data/data/com.termux/files/usr/bin/phonia
 } &> /dev/null
 fi
 sleep 0.5
@@ -213,6 +198,7 @@ fi
 fi
 
 {
+rm config.py
 cp config.example.py config.py
 pip3 install setuptools
 pip3 install -r requirements.txt
@@ -233,4 +219,14 @@ else
 sh -c 'tar -x geckodriver -zf geckodriver-*.tar.gz -O > /usr/bin/geckodriver'
 chmod +x /usr/bin/geckodriver
 fi
+} &> /dev/null
+
+{
+cd ~/phonia/bin
+cp phonia /usr/local/bin
+chmod +x /usr/local/bin/phonia
+cp phonia /bin
+chmod +x /bin/phonia
+cp phonia /data/data/com.termux/files/usr/bin
+chmod +x /data/data/com.termux/files/usr/bin/phonia
 } &> /dev/null
