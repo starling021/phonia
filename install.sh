@@ -90,8 +90,7 @@ fi
 else 
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
-pkg -y install python3
-pkg -y install python3-pip
+pkg -y install python
 pkg -y install wget
 fi
 fi
@@ -169,8 +168,7 @@ fi
 else 
 echo ""$BS"Installing dependencies..."$CE""
 pkg update
-pkg -y install python3
-pkg -y install python3-pip
+pkg -y install python
 pkg -y install wget
 fi
 fi
@@ -221,18 +219,18 @@ pip3 install -r requirements.txt
 } &> /dev/null
 
 {
-if [[ -f /etc/phonia.conf ]]
-then
 wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
 if [[ -d /System/Library/CoreServices/Finder.app ]]
 then
 sh -c 'tar -x geckodriver -zf geckodriver-*.tar.gz -O > /usr/local/bin/geckodriver'
 chmod +x /usr/local/bin/geckodriver
 else
+if [[ -d /data/data/com.termux ]]
+then
+sh -c 'tar -x geckodriver -zf geckodriver-*.tar.gz -O > /data/data/com.termux/files/usr/bin'
+chmod +x /data/data/com.termux/files/usr/bin/geckodriver
+else
 sh -c 'tar -x geckodriver -zf geckodriver-*.tar.gz -O > /usr/bin/geckodriver'
 chmod +x /usr/bin/geckodriver
-fi
-else
-exit
 fi
 } &> /dev/null
