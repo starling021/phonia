@@ -69,19 +69,19 @@ ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's
 if [[ "$ASESR" = "" ]]
 then 
 sleep 1
-echo ""$RS"Download failed!"$CE""
+echo ""$RS"[!] Download failed!"$CE""
 sleep 1
 exit
 fi
 if [[ $EUID -ne 0 ]]
 then
 sleep 1
-echo ""$RS"Permission denied!"$CE""
+echo ""$RS"[!] Permission denied!"$CE""
 sleep 1
 exit
 fi
 sleep 1
-echo ""$BS"Installing update..."$CE""
+echo ""$BS"[*] Installing update..."$CE""
 {
 rm -rf ~/phonia
 rm /bin/phonia
@@ -98,7 +98,7 @@ chmod +x install.sh
 ./install.sh
 fi
 } &> /dev/null
-echo ""$GNS"Successfully updated!"$CE""
+echo ""$GNS"[+] Successfully updated!"$CE""
 sleep 1
 exit
 fi
