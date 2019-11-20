@@ -10,35 +10,35 @@ E = '\033[0;97m'
 
 def plus(string):
     if not args.no_ansi and not args.output:
-        print("%s[+]"+E+" %s%s" % (G % 0, string, E))
+        print("%s[+] %s%s" % (G % 0, string, E))
     else:
         print("[+] %s" % (string))
 
 
 def warn(string):
     if not args.no_ansi and not args.output:
-        print("%s[!]"+E+" %s%s" % (Y % 0, string, E))
+        print("%s[!] %s%s" % (Y % 0, string, E))
     else:
         print("[!] %s" % (string))
 
 
 def error(string):
     if not args.no_ansi and not args.output:
-        print("%s[-]"+E+" %s %s%s" % (R % 0, E, string, E))
+        print("%s[-] %s %s%s" % (R % 0, E, string, E))
     else:
         print("[-] %s" % (string))
 
 
 def test(string):
     if not args.no_ansi and not args.output:
-        print("%s[*]"+E+" %s%s" % (B % 0, string, E))
+        print("%s[*] %s%s" % (B % 0, string, E))
     else:
         print("[*] %s" % (string))
 
 
 def info(string):
     if not args.no_ansi and not args.output:
-        print("%s[i]"+E+" %s%s" % (E, string, E))
+        print("%s[i] %s%s" % (E, string, E))
     else:
         print("[i] %s" % (string))
 
