@@ -18,7 +18,7 @@ def scan(number):
         res = send('GET', 'https://numverify.com/')
         soup = BeautifulSoup(res.text, "html5lib")
     except Exception as e:
-        error('Numverify.com is not available')
+        error('Numverify.com is not available.')
         error(e)
         return -1
 
@@ -49,7 +49,7 @@ def scan(number):
 
         data = json.loads(res.content.decode('utf-8'))
     except Exception as e:
-        error('Numverify.com is not available')
+        error('Numverify.com is not available.')
         return -1
 
     if res.content == "Unauthorized" or res.status_code != 200:
