@@ -36,7 +36,7 @@ def test(string):
 
 def info(string):
     if not args.no_ansi and not args.output:
-        print("%s[i] %s%s" % (E, string, E))
+        print("%s[i]%s %s%s" % (W % 1, E, string, E))
     else:
         print("[i] %s" % (string))
 
