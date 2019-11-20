@@ -38,7 +38,7 @@ def osintIndividualScan():
             else:
                 dorkRequest = replaceVariables(dork['request'], numberObj)
 
-            info("Searching for footprints on {}...".format(dork['site']))
+            test("Searching for footprints on {}...".format(dork['site']))
 
             for result in search(dorkRequest, stop=dork['stop']):
                 plus("URL: " + result)
@@ -63,7 +63,7 @@ def osintReputationScan():
         else:
             dorkRequest = replaceVariables(dork['request'], numberObj)
 
-        info("Searching for {}...".format(dork['title']))
+        test("Searching for {}...".format(dork['title']))
         for result in search(dorkRequest, stop=dork['stop']):
             plus("URL: " + result)
 
@@ -85,7 +85,7 @@ def osintSocialMediaScan():
         else:
             dorkRequest = replaceVariables(dork['request'], numberObj)
 
-        info("Searching for footprints on {}...".format(dork['site']))
+        test("Searching for footprints on {}...".format(dork['site']))
 
         for result in search(dorkRequest, stop=dork['stop']):
             plus("URL: " + result)
@@ -98,7 +98,7 @@ def osintDisposableNumScan():
     info('---- Temporary number providers footprints ----')
 
     try:
-        info("Searching for phone number on tempophone.com...")
+        test("Searching for phone number on tempophone.com...")
         response = send(
             "GET", "https://tempophone.com/api/v1/phones")
         data = json.loads(response.content.decode('utf-8'))
@@ -114,7 +114,7 @@ def osintDisposableNumScan():
     for dork in dorks:
         dorkRequest = replaceVariables(dork['request'], numberObj)
 
-        info("Searching for footprints on {}...".format(dork['site']))
+        test("Searching for footprints on {}...".format(dork['site']))
 
         for result in search(dorkRequest, stop=dork['stop']):
             plus("Result found: {}".format(dork['site']))
@@ -143,7 +143,7 @@ def osintScan(numberObject, rerun=False):
 
     if not rerun:
         # Whitepages
-        info("Generating scan URL on 411.com...")
+        test("Generating scan URL on 411.com...")
         plus("Scan URL: https://www.411.com/phone/{}".format(
             internationalNumber.replace('+', '').replace(' ', '-')))
 
@@ -157,7 +157,7 @@ def osintScan(numberObject, rerun=False):
 
     info('---- Web pages footprints ----')
 
-    info("Searching for footprints on web pages... (limit=10)")
+    test("Searching for footprints on web pages... (limit=10)")
     if customFormatting:
         req = '{} OR "{}" OR "{}" OR "{}"'.format(
             number, number, internationalNumber, customFormatting)
@@ -181,7 +181,7 @@ def osintScan(numberObject, rerun=False):
 
     osintReputationScan()
 
-    info("Generating URL on scamcallfighters.com...")
+    test("Generating URL on scamcallfighters.com...")
     plus('http://www.scamcallfighters.com/search-phone-{}.html'.format(number))
 
     tmpNumAsk = ask(
