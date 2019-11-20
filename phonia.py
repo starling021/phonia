@@ -78,7 +78,7 @@ def main():
     # Ensure the usage of Python3
     if sys.version_info[0] < 3:
         print(
-            "(!) Please run the tool using Python 3")
+            "[-] Phonia Toolkit must be run as Python3!")
         sys.exit()
 
     # If any param is passed, execute help command
@@ -110,7 +110,7 @@ def main():
 
 
 def signal_handler(signal, frame):
-    print('\n[!] You pressed Ctrl + C! Exiting...')
+    print('[!] You choose to stop scanning!')
 
     closeBrowser()
 
