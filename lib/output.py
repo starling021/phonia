@@ -6,11 +6,9 @@ from lib.colors import *
 from lib.args import args
 from lib.logger import Logger
 
-E = '\033[0;97m'
-
 def plus(string):
     if not args.no_ansi and not args.output:
-        print("%s[+] %s%s" % (G % 0, string, E))
+        print("%s[+]%s %s%s" % (G % 0, E, string, E))
     else:
         print("[+] %s" % (string))
 
@@ -38,7 +36,7 @@ def test(string):
 
 def info(string):
     if not args.no_ansi and not args.output:
-        print("%s[i]%s %s%s" % (W, E, string, E))
+        print("%s[i] %s%s" % (E, string, E))
     else:
         print("[i] %s" % (string))
 
