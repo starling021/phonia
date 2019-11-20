@@ -93,7 +93,7 @@ def main():
         
     # Verify scanner option
     if not args.scanner in scanners:
-        print(("Error: scanner doesn't exists."))
+        throw(("Error: scanner doesn't exists."))
         sys.exit()
 
     if args.number:
