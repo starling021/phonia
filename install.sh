@@ -221,6 +221,7 @@ else
 sh -c 'tar -x geckodriver -zf geckodriver-*.tar.gz -O > /usr/bin/geckodriver'
 chmod +x /usr/bin/geckodriver
 fi
+fi
 } &> /dev/null
 
 {
