@@ -8,28 +8,28 @@ from lib.logger import Logger
 
 def plus(string):
     if not args.no_ansi and not args.output:
-        print("%s[+]%s %s%s" % (G % 0, E, string, E))
+        print("%s[+]%s %s%s" % (G % 1, E, string, E))
     else:
         print("[+] %s" % (string))
 
 
 def warn(string):
     if not args.no_ansi and not args.output:
-        print("%s[!]%s %s%s" % (Y % 0, E, string, E))
+        print("%s[!]%s %s%s" % (Y % 1, E, string, E))
     else:
         print("[!] %s" % (string))
 
 
 def error(string):
     if not args.no_ansi and not args.output:
-        print("%s[-]%s %s%s" % (R % 0, E, string, E))
+        print("%s[-]%s %s%s" % (R % 1, E, string, E))
     else:
         print("[-] %s" % (string))
 
 
 def test(string):
     if not args.no_ansi and not args.output:
-        print("%s[*]%s %s%s" % (B % 0, E, string, E))
+        print("%s[*]%s %s%s" % (B % 1, E, string, E))
     else:
         print("[*] %s" % (string))
 
@@ -50,7 +50,7 @@ def more(string):
 
 def title(string):
     if not args.no_ansi and not args.output:
-        print("%s%s%s%s" % (BOLD, Y % 0, string, E))
+        print("%s%s%s%s" % (BOLD, Y % 1, string, E))
     else:
         print("%s" % (string))
 
