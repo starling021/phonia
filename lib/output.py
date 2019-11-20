@@ -6,38 +6,39 @@ from lib.colors import *
 from lib.args import args
 from lib.logger import Logger
 
+E = '\033[0;97m'
 
 def plus(string):
     if not args.no_ansi and not args.output:
-        print("%s[+]"+\033[0;97m+" %s%s" % (G % 0, string, E))
+        print("%s[+]"+E+" %s%s" % (G % 0, string, E))
     else:
         print("[+] %s" % (string))
 
 
 def warn(string):
     if not args.no_ansi and not args.output:
-        print("%s[!]"+\033[0;97m+" %s%s" % (Y % 0, string, E))
+        print("%s[!]"+E+" %s%s" % (Y % 0, string, E))
     else:
         print("[!] %s" % (string))
 
 
 def error(string):
     if not args.no_ansi and not args.output:
-        print("%s[-]"+\033[0;97m+" %s %s%s" % (R % 0, E, string, E))
+        print("%s[-]"+E+" %s %s%s" % (R % 0, E, string, E))
     else:
         print("[-] %s" % (string))
 
 
 def test(string):
     if not args.no_ansi and not args.output:
-        print("%s[*]"+\033[0;97m+" %s%s" % (B % 0, string, E))
+        print("%s[*]"+E+" %s%s" % (B % 0, string, E))
     else:
         print("[*] %s" % (string))
 
 
 def info(string):
     if not args.no_ansi and not args.output:
-        print("%s[i]"+\033[0;97m+" %s%s" % (E, string, E))
+        print("%s[i]"+E+" %s%s" % (E, string, E))
     else:
         print("[i] %s" % (string))
 
