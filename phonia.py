@@ -49,7 +49,7 @@ def scanNumber(InputNumber):
     os.system("cat banner/banner.txt")
     print("")
     time.sleep(3)
-    title("[!] ---- Fetching informations for {} ---- [!]".format(formatNumber(InputNumber)))
+    test("Fetching informations for {}...".format(formatNumber(InputNumber)))
     time.sleep(5)
 
     number = localscan.scan(InputNumber)
