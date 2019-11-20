@@ -112,7 +112,7 @@ def main():
 
 
 def signal_handler(signal, frame):
-    A = '\033[1;31m'
+    A = '\033[1;33m'
     W = '\033[0;97m'
     E = '\033[0m'
     print(A+'\n[!]'+W+' You choose to stop scanning!'+E)
