@@ -107,7 +107,7 @@ def osintDisposableNumScan():
                 plus("Found a temporary number provider: tempophone.com")
                 askForExit()
     except Exception as e:
-        error("Unable to reach tempophone.com API. Skipping.")
+        error("Unable to reach tempophone.com API.")
 
     dorks = json.load(open('osint/disposable_num_providers.json'))
 
@@ -185,7 +185,7 @@ def osintScan(numberObject, rerun=False):
     plus('http://www.scamcallfighters.com/search-phone-{}.html'.format(number))
 
     tmpNumAsk = ask(
-        "Would you like to search for temporary number providers footprints ? (Y/n) ")
+        "Would you like to search for temporary number providers footprints? (Y/n) ")
 
     if tmpNumAsk.lower() != 'n' and tmpNumAsk.lower() != 'no':
         osintDisposableNumScan()
