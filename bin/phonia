@@ -23,13 +23,13 @@
 # SOFTWARE.
 
 #blue start 
-	BS="-e \033[34m"
+	BS="-e \033[1;34m[*]\033[0;97m "
 #color end
 	CE="\033[0m"
 #red start
-	RS="-e \033[31m"
+	RS="-e \033[1;31m[-]\033[0;97m "
 #green start
-	GNS="-e \033[32m"
+	GNS="-e \033[1;32m[+]\033[0;97m "
 
 printf '\033]2;Phonia Toolkit\a'
 
@@ -57,19 +57,19 @@ ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's
 if [[ "$ASESR" = "" ]]
 then 
 sleep 1
-echo ""$RS"[!] Download failed!"$CE""
+echo ""$RS"Download failed!"$CE""
 sleep 1
 exit
 fi
 if [[ $EUID -ne 0 ]]
 then
 sleep 1
-echo ""$RS"[!] Permission denied!"$CE""
+echo ""$RS"Permission denied!"$CE""
 sleep 1
 exit
 fi
 sleep 1
-echo ""$BS"[*] Installing update..."$CE""
+echo ""$BS"Installing update..."$CE""
 {
 rm -rf ~/phonia
 rm /bin/phonia
@@ -86,7 +86,7 @@ chmod +x install.sh
 ./install.sh
 fi
 } &> /dev/null
-echo ""$GNS"[+] Successfully updated!"$CE""
+echo ""$GNS"Successfully updated!"$CE""
 sleep 1
 exit
 fi
