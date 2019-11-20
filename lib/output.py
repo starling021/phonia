@@ -16,16 +16,16 @@ def plus(string):
 
 def warn(string):
     if not args.no_ansi and not args.output:
-        print("%s(!) %s%s" % (Y % 0, string, E))
+        print("%s[!] %s%s" % (Y % 0, string, E))
     else:
-        print("(!) %s" % (string))
+        print("[!] %s" % (string))
 
 
 def error(string):
     if not args.no_ansi and not args.output:
-        print("%s[!]%s %s%s" % (R % 0, E, string, E))
+        print("%s[-]%s %s%s" % (R % 0, E, string, E))
     else:
-        print("[!] %s" % (string))
+        print("[-] %s" % (string))
 
 
 def test(string):
