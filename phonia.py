@@ -55,7 +55,7 @@ def scanNumber(InputNumber):
     number = localscan.scan(InputNumber)
 
     if not number:
-        throw(("Error: an error occured parsing {}. Skipping.".format(
+        throw(("Error: an error occured parsing {}.".format(
             formatNumber(InputNumber))))
 
     numverify.scan(number['default'])
