@@ -55,7 +55,7 @@ def scanNumber(InputNumber):
     number = localscan.scan(InputNumber)
 
     if not number:
-        throw(("Error: an error occured parsing {}.".format(
+        throw(("Error: an error occured parsing {}!".format(
             formatNumber(InputNumber))))
 
     numverify.scan(number['default'])
@@ -93,7 +93,7 @@ def main():
         
     # Verify scanner option
     if not args.scanner in scanners:
-        throw(("Error: scanner doesn't exists."))
+        throw(("Error: scanner doesn't exists!"))
         sys.exit()
 
     if args.number:
@@ -115,7 +115,7 @@ def signal_handler(signal, frame):
     A = '\033[1;33m'
     W = '\033[0;97m'
     E = '\033[0m'
-    print(A+'\n[!]'+W+' You choose to stop scanning!'+E)
+    print(A+'\n[!]'+W+' You choose to stop scanning.'+E)
 
     closeBrowser()
 
