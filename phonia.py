@@ -115,6 +115,7 @@ def main():
         else:
             run = args.input
             
+        print(run)
         for line in run.readlines():
             scanNumber(line)
     else:
