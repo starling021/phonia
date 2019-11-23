@@ -39,8 +39,8 @@ def search(req, stop):
         soup = BeautifulSoup(htmlBody, 'html5lib')
 
         while soup.find("div", id="recaptcha") is not None:
-            warn('You are temporary blacklisted from Google search. Complete the captcha then press ENTER.')
-            token = ask('>')
+            warn('Complete the captcha then press ENTER:')
+            token = ask('> ')
             htmlBody = browser.find_element_by_css_selector("body").get_attribute('innerHTML')
             soup = BeautifulSoup(htmlBody, 'html5lib')
 
@@ -74,7 +74,7 @@ def searchApi(req, stop):
     response = r.json()
 
     if 'error' in response:
-        error('Error while fetching Google search API. Maybe usage limit ? Please verify your keys.')
+        error('Error while fetching Google search API.')
         print(response['error'])
         askForExit()
         return []
