@@ -91,16 +91,19 @@ def main():
     if args.output:
         sys.stdout = Logger()
         
+
     # Verify scanner option
     if not args.scanner in scanners:
         throw(("Error: scanner doesn't exists!"))
         sys.exit()
 
+    print(args)
     if args.number:
         scanNumber(args.number)
     elif args.input:
-        inp = str(args.input)[25:]
-        inp = inp[:inp.index('\'')]
+        print(args.input)
+        inp = args.input
+        print(inp)
         import os
         import os.path
         if (os.path.exists("/tmp/phonia")):
@@ -113,13 +116,11 @@ def main():
             os.system("echo $OLDPWD >> /tmp/phonia/phpath.temp")
         else:
             os.system("echo $OLDPWD >> /tmp/phonia/phpath.temp")
-
         if not '/' in inp:
             run = open(open("/tmp/phonia/phpath.temp").read().split('\n')[-2]+'/'+inp)
         else:
             run = open(inp)
 
-        print(run)
         for line in run.readlines():
             scanNumber(line)
     else:
