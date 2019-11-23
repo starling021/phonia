@@ -63,7 +63,7 @@ def search(req, stop):
 
         return links
     except Exception as e:
-        error('Request failed. Please retry or open an issue on https://github.com/entynetproject/phonia.')
+        error('Request failed!')
         print(e)
         return []
 
