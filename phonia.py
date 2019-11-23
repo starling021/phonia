@@ -98,7 +98,6 @@ def main():
         throw(("Error: scanner doesn't exists!"))
         sys.exit()
 
-    print(args)
     if args.number:
         scanNumber(args.number)
     elif args.input:
