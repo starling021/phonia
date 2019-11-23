@@ -22,8 +22,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-pwd=$PWD
-
 #blue start 
 	BS="-e \033[1;34m[*]\033[0;97m "
 #color end
@@ -93,7 +91,6 @@ sleep 1
 exit
 fi
 
-cd ~
 if [[ -d ~/phonia ]]
 then
 {
