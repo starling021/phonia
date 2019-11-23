@@ -46,6 +46,7 @@ from scanners import recon
 
 def scanNumber(InputNumber):
     os.system("clear")
+    print("")
     os.system("cat banner/banner.txt")
     print("")
     time.sleep(3)
