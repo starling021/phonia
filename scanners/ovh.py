@@ -22,7 +22,7 @@ def scan(localNumber, numberCountry):
             "GET", "https://api.ovh.com/1.0/telephony/number/detailedZones", data="", headers=headers, params=querystring)
         data = json.loads(response.content.decode('utf-8'))
     except Exception as e:
-        error('OVH API is unreachable. Maybe retry later.')
+        error('OVH API is unreachable.')
         return -1
 
     if isinstance(data, list):
