@@ -119,14 +119,16 @@ def main():
             run = open(open("/tmp/phonia/phpath.temp").read().split('\n')[-2]+'/'+inp)
             os.system("rm -r /tmp/phonia")
         else:
-            run = open(inp)
+            run = inp
             os.system("rm -r /tmp/phonia")
             
-        if (os.path.exists(run)):
+        if os.path.exists(run):
             time.sleep(0)
         else:
-            throw(("Error: input file doesn't exists!"))
+            throw(("Error: file doesn't exists!"))
             sys.exit()
+
+        run = open(run)
 
         for line in run.readlines():
             scanNumber(line)
