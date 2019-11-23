@@ -102,9 +102,7 @@ def main():
     if args.number:
         scanNumber(args.number)
     elif args.input:
-        print(args.input)
         inp = args.input
-        print(inp)
         import os
         import os.path
         if (os.path.exists("/tmp/phonia")):
@@ -124,7 +122,7 @@ def main():
             run = open(inp)
             os.system("rm -r /tmp/phonia")
             
-        if (os.path.exists(inp)):
+        if (os.path.exists(run)):
             time.sleep(0)
         else:
             throw(("Error: input file doesn't exists!"))
