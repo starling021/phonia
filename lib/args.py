@@ -9,7 +9,7 @@ parser.add_argument('-n', '--number', metavar='number', type=str, help='The phon
 
 parser.add_argument('-i', '--input', metavar="input_file", type=str, help='Phone number list to scan.')
 
-parser.add_argument('-o', '--output', metavar="output_file", type=argparse.FileType('w'), help='Output to save scan results.')
+parser.add_argument('-o', '--output', metavar="output_file", type=str, help='Output to save scan results.')
 
 parser.add_argument('-s', '--scanner', metavar="scanner", default="all", type=str, help='The scanner to use.')
 
