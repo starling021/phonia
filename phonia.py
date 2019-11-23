@@ -128,7 +128,6 @@ def main():
             time.sleep(0)
         else:
             throw(("Error: input file doesn't exists!"))
-            import sys
             sys.exit()
 
         for line in run.readlines():
