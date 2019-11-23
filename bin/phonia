@@ -22,6 +22,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+pwd=$PWD
+
 #blue start 
 	BS="-e \033[1;34m[*]\033[0;97m "
 #color end
@@ -98,7 +100,12 @@ then
 cd ~/phonia
 } &> /dev/null
 mv phonia.py phonia
+if [[ $1 = "-i" || $1 = "-o" ]]
+then
+python3 phonia $1 $pwd/$2 $3 $4 $5 $6 $7 $8 $9
+else
 python3 phonia $1 $2 $3 $4 $5 $6 $7 $8 $9
+fi
 mv phonia phonia.py
 else
 {
@@ -112,7 +119,12 @@ git clone https://github.com/entynetproject/phonia.git
 cd ~/phonia
 } &> /dev/null
 mv phonia.py phonia
+if [[ $1 = "-i" || $1 = "-o" ]]
+then
+python3 phonia $1 $pwd/$2 $3 $4 $5 $6 $7 $8 $9
+else
 python3 phonia $1 $2 $3 $4 $5 $6 $7 $8 $9
+fi
 mv phonia phonia.py
 else
 cd ~
