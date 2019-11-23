@@ -123,6 +123,13 @@ def main():
         else:
             run = open(inp)
             os.system("rm -r /tmp/phonia")
+            
+        if (os.path.exists(inp)):
+            time.sleep(0)
+        else:
+            throw(("Error: input file doesn't exists!"))
+            import sys
+            sys.exit()
 
         for line in run.readlines():
             scanNumber(line)
