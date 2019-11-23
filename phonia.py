@@ -116,7 +116,7 @@ def main():
         else:
             os.system("echo $OLDPWD >> /tmp/phonia/phpath.temp")
         if not '/' in inp:
-            run = open(open("/tmp/phonia/phpath.temp").read().split('\n')[-2]+'/'+inp)
+            run = open("/tmp/phonia/phpath.temp").read().split('\n')[-2]+'/'+inp
             os.system("rm -r /tmp/phonia")
         else:
             run = inp
