@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 
 import sys
+import os
 from lib.args import args
 
 class Logger(object):
     def __init__(self):
         self.terminal = sys.stdout
-        self.log = open(args.output.name, "a")
+        if not '/' in args.output:
+            output = open('/tmp/phonia/phpath.temp').read().split('\n')[-2]+'/'+args.output
+        else:
+            output = args.output
+        self.log = open(output, "a")
 
     def write(self, message):
         self.terminal.write(message)
