@@ -99,6 +99,8 @@ def main():
     if args.number:
         scanNumber(args.number)
     elif args.input:
+        import os
+        import os.path
         if (os.path.exists("/tmp/phonia")):
             time.sleep(0)
         else:
@@ -110,7 +112,7 @@ def main():
         else:
             os.system("echo $OLDPWD >> /tmp/phonia/phpath.temp")
                     
-        if not '/' in args.run:
+        if not '/' in args.input:
             run = open("/tmp/phonia/phpath.temp").read().split('\n')[-2]+'/'+args.input
         else:
             run = args.input
