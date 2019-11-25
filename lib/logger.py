@@ -7,10 +7,7 @@ from lib.args import args
 class Logger(object):
     def __init__(self):
         self.terminal = sys.stdout
-        if not '/' in args.output:
-            output = open('/tmp/phonia/phpath.temp').read().split('\n')[-2]+'/'+args.output
-        else:
-            output = args.output
+        output = args.output
         self.log = open(output, "a")
 
     def write(self, message):
