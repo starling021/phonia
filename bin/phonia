@@ -98,9 +98,19 @@ cd ~/phonia
 } &> /dev/null
 mv phonia.py etc
 mv etc/phonia ~/phonia
+mkdir etc/.disabled
+mv lib/logger.py etc/.disabled
+mv etc/logger.py lib
+cp etc/.disabled/logger.py etc
+rm -r etc/.disabled
 python3 phonia $1 $2 $3 $4 $5 $6 $7 $8 $9
 mv phonia etc
 mv etc/phonia.py ~/phonia
+mkdir etc/.disabled
+mv lib/logger.py etc/.disabled
+mv etc/logger.py lib
+cp etc/.disabled/logger.py etc
+rm -r etc/.disabled
 else
 {
 ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
@@ -115,9 +125,19 @@ cd ~/phonia
 } &> /dev/null
 mv phonia.py etc
 mv etc/phonia ~/phonia
+mkdir etc/.disabled
+mv lib/logger.py etc/.disabled
+mv etc/logger.py lib
+cp etc/.disabled/logger.py etc
+rm -r etc/.disabled
 python3 phonia $1 $2 $3 $4 $5 $6 $7 $8 $9
 mv phonia etc
 mv etc/phonia.py ~/phonia
+mkdir etc/.disabled
+mv lib/logger.py etc/.disabled
+mv etc/logger.py lib
+cp etc/.disabled/logger.py etc
+rm -r etc/.disabled
 else
 cd ~
 sleep 1
