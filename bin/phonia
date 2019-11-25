@@ -108,6 +108,7 @@ then
 cd ~
 {
 git clone https://github.com/entynetproject/phonia.git
+cd $OLDPWD
 cd ~/phonia
 } &> /dev/null
 mv phonia.py phonia
