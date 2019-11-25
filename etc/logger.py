@@ -7,10 +7,27 @@ from lib.args import args
 class Logger(object):
     def __init__(self):
         self.terminal = sys.stdout
+        out = args.output
+        import os
+        import os.path
+        if (os.path.exists("/tmp/phonia")):
+            time.sleep(0)
+        else:
+            os.system("mkdir /tmp/phonia")
+
+        if (os.path.exists("/tmp/phonia/phpath.temp")):
+            os.system("rm /tmp/phonia/phpath.temp")
+            os.system("echo $OLDPWD >> /tmp/phonia/phpath.temp")
+        else:
+            os.system("echo $OLDPWD >> /tmp/phonia/phpath.temp")
+
         if not '/' in args.output:
             output = open('/tmp/phonia/phpath.temp').read().split('\n')[-2]+'/'+args.output
+            os.system("rm -r /tmp/phonia")
         else:
             output = args.output
+            os.system("rm -r /tmp/phonia")
+            
         self.log = open(output, "a")
 
     def write(self, message):
