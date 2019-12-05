@@ -92,13 +92,13 @@
 
     phonia -n 15554443333 -s footprints
 
-# Terms of use
+# Phonia toolkit disclaimer
 
-    This tool is only for educational purposes only.
-    Use this tool wisely and never without permission.
-    I am not responsible for anything you do with this tool.
+    INFO: Usage of the Phonia Toolkit for attacking targets without prior mutual consent is illegal. 
+    It is the end user's responsibility to obey all applicable local, state, federal, and international laws. 
+    Developers assume no liability and are not responsible for any misuse or damage caused by this program.
 
-# Phonia MIT license
+# Phonia toolkit license
 
     MIT License
 
