@@ -41,9 +41,6 @@
 
 # How to install phonia
 
-    INFO: Phonia Toolkit will be installed into /bin and 
-    /usr/local/bin as /bin/phonia and /usr/local/bin/phonia!
-
 > cd phonia
 
 > chmod +x install.sh
