@@ -23,10 +23,10 @@ class Logger(object):
 
         if not '/' in args.output:
             output = open('/tmp/phonia/phpath.temp').read().split('\n')[-2]+'/'+args.output
-            os.system("rm -r /tmp/phonia")
+            os.system("rm -rf /tmp/phonia")
         else:
             output = args.output
-            os.system("rm -r /tmp/phonia")
+            os.system("rm -rf /tmp/phonia")
             
         self.log = open(output, "a")
 
