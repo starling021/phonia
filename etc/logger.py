@@ -12,7 +12,7 @@ class Logger(object):
         import os.path
 
         if not '/' in args.output:
-            output = os.environ['OLDPWD']+args.output
+            output = os.environ['OLDPWD']+'/'+args.output
         else:
             output = args.output
             
