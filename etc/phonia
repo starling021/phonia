@@ -104,22 +104,11 @@ def main():
         inp = args.input
         import os
         import os.path
-        if (os.path.exists("/tmp/phonia")):
-            time.sleep(0)
-        else:
-            os.system("mkdir /tmp/phonia")
-
-        if (os.path.exists("/tmp/phonia/phpath.temp")):
-            os.system("rm /tmp/phonia/phpath.temp")
-            os.system("echo '$OLDPWD' >> /tmp/phonia/phpath.temp")
-        else:
-            os.system("echo '$OLDPWD' >> /tmp/phonia/phpath.temp")
+        
         if not '/' in inp:
-            run = open("/tmp/phonia/phpath.temp").read().split('\n')[-2]+'/'+inp
-            os.system("rm -rf /tmp/phonia")
+            run = os.environ['OLDPWD']+inp
         else:
             run = inp
-            os.system("rm -rf /tmp/phonia")
             
         if os.path.exists(run):
             time.sleep(0)
