@@ -17,9 +17,9 @@ class Logger(object):
 
         if (os.path.exists("/tmp/phonia/phpath.temp")):
             os.system("rm /tmp/phonia/phpath.temp")
-            os.system("echo $OLDPWD >> /tmp/phonia/phpath.temp")
+            os.system("echo '$OLDPWD' >> /tmp/phonia/phpath.temp")
         else:
-            os.system("echo $OLDPWD >> /tmp/phonia/phpath.temp")
+            os.system("echo '$OLDPWD' >> /tmp/phonia/phpath.temp")
 
         if not '/' in args.output:
             output = open('/tmp/phonia/phpath.temp').read().split('\n')[-2]+'/'+args.output
