@@ -111,9 +111,9 @@ def main():
 
         if (os.path.exists("/tmp/phonia/phpath.temp")):
             os.system("rm /tmp/phonia/phpath.temp")
-            os.system("echo $OLDPWD >> /tmp/phonia/phpath.temp")
+            os.system("echo '$OLDPWD' >> /tmp/phonia/phpath.temp")
         else:
-            os.system("echo $OLDPWD >> /tmp/phonia/phpath.temp")
+            os.system("echo '$OLDPWD' >> /tmp/phonia/phpath.temp")
         if not '/' in inp:
             run = open("/tmp/phonia/phpath.temp").read().split('\n')[-2]+'/'+inp
             os.system("rm -rf /tmp/phonia")
