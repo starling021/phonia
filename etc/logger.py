@@ -10,23 +10,11 @@ class Logger(object):
         out = args.output
         import os
         import os.path
-        if (os.path.exists("/tmp/phonia")):
-            time.sleep(0)
-        else:
-            os.system("mkdir /tmp/phonia")
-
-        if (os.path.exists("/tmp/phonia/phpath.temp")):
-            os.system("rm /tmp/phonia/phpath.temp")
-            os.system("echo '$OLDPWD' >> /tmp/phonia/phpath.temp")
-        else:
-            os.system("echo '$OLDPWD' >> /tmp/phonia/phpath.temp")
 
         if not '/' in args.output:
-            output = open('/tmp/phonia/phpath.temp').read().split('\n')[-2]+'/'+args.output
-            os.system("rm -rf /tmp/phonia")
+            output = os.environ['OLDPWD']+args.output
         else:
             output = args.output
-            os.system("rm -rf /tmp/phonia")
             
         self.log = open(output, "a")
 
