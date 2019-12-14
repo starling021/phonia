@@ -97,13 +97,13 @@ then
 cd ~/phonia
 mkdir etc/.disabled
 mv phonia etc/.disabled
-mv etc/phonia ~/proton
+mv etc/phonia ~/phonia
 cp etc/.disabled/phonia etc
 rm -rf etc/.disabled
 cd ~/phonia
 mkdir etc/.disabled
 mv lib/logger.py etc/.disabled
-mv etc/logger.py ~/proton/lib
+mv etc/logger.py ~/phonia/lib
 cp etc/.disabled/logger.py etc
 rm -rf etc/.disabled
 } &> /dev/null
@@ -113,13 +113,13 @@ chmod +x phonia
 cd ~/phonia
 mkdir etc/.disabled
 mv phonia etc/.disabled
-mv etc/phonia ~/proton
+mv etc/phonia ~/phonia
 cp etc/.disabled/phonia etc
 rm -rf etc/.disabled
 cd ~/phonia
 mkdir etc/.disabled
 mv lib/logger.py etc/.disabled
-mv etc/logger.py ~/proton/lib
+mv etc/logger.py ~/phonia/lib
 cp etc/.disabled/logger.py etc
 rm -rf etc/.disabled
 } &> /dev/null
@@ -136,13 +136,13 @@ cd $OLDPWD
 cd ~/phonia
 mkdir etc/.disabled
 mv phonia etc/.disabled
-mv etc/phonia ~/proton
+mv etc/phonia ~/phonia
 cp etc/.disabled/phonia etc
 rm -rf etc/.disabled
 cd ~/phonia
 mkdir etc/.disabled
 mv lib/logger.py etc/.disabled
-mv etc/logger.py ~/proton/lib
+mv etc/logger.py ~/phonia/lib
 cp etc/.disabled/logger.py etc
 rm -rf etc/.disabled
 } &> /dev/null
@@ -152,13 +152,13 @@ chmod +x phonia
 cd ~/phonia
 mkdir etc/.disabled
 mv phonia etc/.disabled
-mv etc/phonia ~/proton
+mv etc/phonia ~/phonia
 cp etc/.disabled/phonia etc
 rm -rf etc/.disabled
 cd ~/phonia
 mkdir etc/.disabled
 mv lib/logger.py etc/.disabled
-mv etc/logger.py ~/proton/lib
+mv etc/logger.py ~/phonia/lib
 cp etc/.disabled/logger.py etc
 rm -rf etc/.disabled
 } &> /dev/null
