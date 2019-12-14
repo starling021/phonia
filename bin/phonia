@@ -95,23 +95,33 @@ if [[ -d ~/phonia ]]
 then
 {
 cd ~/phonia
-mv phonia.py etc
-mv etc/phonia ~/phonia
+mkdir etc/.disabled
+mv phonia etc/.disabled
+mv etc/phonia ~/proton
+cp etc/.disabled/phonia etc
+rm -rf etc/.disabled
+cd ~/phonia
 mkdir etc/.disabled
 mv lib/logger.py etc/.disabled
-mv etc/logger.py lib
+mv etc/logger.py ~/proton/lib
 cp etc/.disabled/logger.py etc
-rm -r etc/.disabled
+rm -rf etc/.disabled
 } &> /dev/null
-python3 phonia $1 $2 $3 $4 $5 $6 $7 $8 $9
+chmod +x phonia
+./phonia $1 $2 $3 $4 $5 $6 $7 $8 $9
 {
-mv phonia etc
-mv etc/phonia.py ~/phonia
+cd ~/phonia
+mkdir etc/.disabled
+mv phonia etc/.disabled
+mv etc/phonia ~/proton
+cp etc/.disabled/phonia etc
+rm -rf etc/.disabled
+cd ~/phonia
 mkdir etc/.disabled
 mv lib/logger.py etc/.disabled
-mv etc/logger.py lib
+mv etc/logger.py ~/proton/lib
 cp etc/.disabled/logger.py etc
-rm -r etc/.disabled
+rm -rf etc/.disabled
 } &> /dev/null
 else
 {
@@ -124,23 +134,33 @@ cd ~
 git clone https://github.com/entynetproject/phonia.git
 cd $OLDPWD
 cd ~/phonia
-mv phonia.py etc
-mv etc/phonia ~/phonia
+mkdir etc/.disabled
+mv phonia etc/.disabled
+mv etc/phonia ~/proton
+cp etc/.disabled/phonia etc
+rm -rf etc/.disabled
+cd ~/phonia
 mkdir etc/.disabled
 mv lib/logger.py etc/.disabled
-mv etc/logger.py lib
+mv etc/logger.py ~/proton/lib
 cp etc/.disabled/logger.py etc
-rm -r etc/.disabled
+rm -rf etc/.disabled
 } &> /dev/null
-python3 phonia $1 $2 $3 $4 $5 $6 $7 $8 $9
+chmod +x phonia
+./phonia $1 $2 $3 $4 $5 $6 $7 $8 $9
 {
-mv phonia etc
-mv etc/phonia.py ~/phonia
+cd ~/phonia
+mkdir etc/.disabled
+mv phonia etc/.disabled
+mv etc/phonia ~/proton
+cp etc/.disabled/phonia etc
+rm -rf etc/.disabled
+cd ~/phonia
 mkdir etc/.disabled
 mv lib/logger.py etc/.disabled
-mv etc/logger.py lib
+mv etc/logger.py ~/proton/lib
 cp etc/.disabled/logger.py etc
-rm -r etc/.disabled
+rm -rf etc/.disabled
 } &> /dev/null
 else
 cd ~
