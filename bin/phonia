@@ -100,7 +100,6 @@ mv phonia etc/.disabled
 mv etc/phonia ~/phonia
 cp etc/.disabled/phonia etc
 rm -rf etc/.disabled
-cd ~/phonia
 mkdir etc/.disabled
 mv lib/logger.py etc/.disabled
 mv etc/lib/logger.py ~/phonia/lib
@@ -116,7 +115,6 @@ mv phonia etc/.disabled
 mv etc/phonia ~/phonia
 cp etc/.disabled/phonia etc
 rm -rf etc/.disabled
-cd ~/phonia
 mkdir etc/.disabled
 mv lib/logger.py etc/.disabled
 mv etc/lib/logger.py ~/phonia/lib
@@ -139,7 +137,6 @@ mv phonia etc/.disabled
 mv etc/phonia ~/phonia
 cp etc/.disabled/phonia etc
 rm -rf etc/.disabled
-cd ~/phonia
 mkdir etc/.disabled
 mv lib/logger.py etc/.disabled
 mv etc/lib/logger.py ~/phonia/lib
@@ -155,7 +152,6 @@ mv phonia etc/.disabled
 mv etc/phonia ~/phonia
 cp etc/.disabled/phonia etc
 rm -rf etc/.disabled
-cd ~/phonia
 mkdir etc/.disabled
 mv lib/logger.py etc/.disabled
 mv etc/lib/logger.py ~/phonia/lib
