@@ -71,19 +71,19 @@ apt-get update
 apt-get -y install python3
 apt-get -y install python3-pip
 apt-get -y install wget
-apk add python
-apk add python-pip
+apk add python3
+apk add py3-pip
 apk add wget
 pacman -Sy
-yes | pacman -S python
+yes | pacman -S python3
 yes | pacman -S python-pip
 yes | pacman -S wget
 zypper refresh
-zypper install -y python
-zypper install -y python-pip
+zypper install -y python3
+zypper install -y python3-pip
 zypper install -y wget
-yum -y install python
-yum -y install python-pip
+yum -y install python3
+yum -y install python3-pip
 yum -y install wget
 } &> /dev/null
 
