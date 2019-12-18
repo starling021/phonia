@@ -96,9 +96,6 @@ xbps-install -S
 xbps-install -y python3
 xbps-install -y python3-pip
 xbps-install wget
-nix-env -i python3
-nix-env -i python3.7-bootstrapped-pip-19.2.3
-nix-env -i wget
 } &> /dev/null
 
 {
