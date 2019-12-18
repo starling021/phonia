@@ -67,17 +67,17 @@ sleep 1
 pkg update
 pkg -y install python
 pkg -y install wget
-apt-get update
 apt-get -y install python3
 apt-get -y install python3-pip
 apt-get -y install wget
+apk update
 apk add python3
 apk add py3-pip
 apk add wget
 pacman -Sy
-yes | pacman -S python3
-yes | pacman -S python-pip
-yes | pacman -S wget
+pacman -S --noconfirm python3
+pacman -S --noconfirm python3-pip
+pacman -S --noconfirm wget
 zypper refresh
 zypper install -y python3
 zypper install -y python3-pip
@@ -85,6 +85,20 @@ zypper install -y wget
 yum -y install python3
 yum -y install python3-pip
 yum -y install wget
+dnf -y install python3
+dnf -y install python3-pip
+dnf -y install wget
+eopkg update-repo
+eopkg -y install python3
+eopkg -y install pip
+eopkg -y install wget
+xbps-install -S
+xbps-install -y python3
+xbps-install -y python3-pip
+xbps-install wget
+nix-env -i python3
+nix-env -i python3.7-bootstrapped-pip-19.2.3
+nix-env -i wget
 } &> /dev/null
 
 {
