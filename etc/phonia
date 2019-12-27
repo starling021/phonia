@@ -105,7 +105,7 @@ def main():
         import os
         import os.path
         
-        if not '/' in inp:
+        if inp[0] != '/':
             run = os.environ['OLDPWD']+'/'+inp
         else:
             run = inp
