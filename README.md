@@ -36,7 +36,7 @@
 
 # About Phonia Toolkit
 
-    INFO: Phonia Toolkit is one of the most advanced toolkits to scan 
+    Phonia Toolkit is one of the most advanced toolkits to scan 
     phone numbers using only free resources. The goal is to first gather 
     standard information such as country, area, carrier and line type on 
     any international phone numbers with a very good accuracy.
@@ -103,7 +103,7 @@
 
 # Phonia Toolkit disclaimer
 
-    INFO: Usage of the Phonia Toolkit for attacking targets without prior mutual consent is illegal. 
+    Usage of the Phonia Toolkit for attacking targets without prior mutual consent is illegal. 
     It is the end user's responsibility to obey all applicable local, state, federal, and international laws. 
     Developers assume no liability and are not responsible for any misuse or damage caused by this program.
 
