@@ -32,12 +32,16 @@
  </a>
 </p>
 
+***
+
 # About Phonia Toolkit
 
     INFO: Phonia Toolkit is one of the most advanced toolkits to scan 
     phone numbers using only free resources. The goal is to first gather 
     standard information such as country, area, carrier and line type on 
     any international phone numbers with a very good accuracy.
+
+***
 
 # Getting started
 
@@ -56,6 +60,8 @@
 > chmod +x uninstall.sh
 
 > ./uninstall.sh
+
+***
 
 # Phonia Toolkit execution
 
@@ -77,6 +83,8 @@
       --no-ansi             Disable colored output.
       -u, --update          Update Phonia Toolkit.
   
+***
+  
 # Phonia Toolkit examples
 
 > Example of the phonia basic scan
@@ -91,11 +99,15 @@
 
     phonia -n 15554443333 -s footprints
 
+***
+
 # Phonia Toolkit disclaimer
 
     INFO: Usage of the Phonia Toolkit for attacking targets without prior mutual consent is illegal. 
     It is the end user's responsibility to obey all applicable local, state, federal, and international laws. 
     Developers assume no liability and are not responsible for any misuse or damage caused by this program.
+
+***
 
 # Phonia Toolkit license
 
@@ -120,5 +132,7 @@
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
+
+***
 
 # Thats all!
