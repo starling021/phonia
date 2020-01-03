@@ -6,7 +6,7 @@
                                  _|    _|  _|    _|  _|    _|  _|    _|  _|  _|    _|  
                                  _|_|_|    _|    _|    _|_|    _|    _|  _|    _|_|_|  
                                  _|                                                    
-                                 _|  Toolkit v4.0
+                                 _|
 
 <p align="center">
   <a href="http://entynetproject.simplesite.com/">
