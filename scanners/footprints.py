@@ -148,7 +148,7 @@ def osintScan(numberObject, rerun=False):
             internationalNumber.replace('+', '').replace(' ', '-')))
 
         askingCustomPayload = ask(
-            'Would you like to use an additional format for this number? (y/N) ')
+            'Use an additional format for this number? (y/N): ')
 
     if rerun or askingCustomPayload == 'y' or askingCustomPayload == 'yes':
         info('We recommand: {} or {}'.format(internationalNumber,
@@ -185,7 +185,7 @@ def osintScan(numberObject, rerun=False):
     plus('http://www.scamcallfighters.com/search-phone-{}.html'.format(number))
 
     tmpNumAsk = ask(
-        "Would you like to search for temporary number providers footprints? (Y/n) ")
+        "Search for temporary number providers footprints? (Y/n): ")
 
     if tmpNumAsk.lower() != 'n' and tmpNumAsk.lower() != 'no':
         osintDisposableNumScan()
@@ -195,7 +195,7 @@ def osintScan(numberObject, rerun=False):
     osintIndividualScan()
 
     retry_input = ask(
-        "Would you like to rerun OSINT scan? (e.g to use a different format) (y/N) ")
+        "Rerun OSINT scan? (y/N): ")
 
     if retry_input.lower() == 'y' or retry_input.lower() == 'yes':
         osintScan(numberObj, True)
