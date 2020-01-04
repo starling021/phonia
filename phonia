@@ -65,7 +65,6 @@ def scanNumber(InputNumber):
     osintScan(number)
 
     info("Scan finished.")
-    print("")
 
 
 def main():
