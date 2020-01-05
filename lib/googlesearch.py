@@ -39,7 +39,8 @@ def search(req, stop):
         soup = BeautifulSoup(htmlBody, 'html5lib')
 
         while soup.find("div", id="recaptcha") is not None:
-            token = ask(warn('Complete the captcha and press ENTER: '))
+            warn('Google captcha detected.')
+            token = ask('Complete the captcha and press ENTER: ')
             htmlBody = browser.find_element_by_css_selector("body").get_attribute('innerHTML')
             soup = BeautifulSoup(htmlBody, 'html5lib')
 
