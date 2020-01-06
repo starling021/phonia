@@ -40,7 +40,7 @@ def search(req, stop):
 
         while soup.find("div", id="recaptcha") is not None:
             warn('Google captcha detected.')
-            token = ask('Complete the captcha and press ENTER: ')
+            token = ask('\033[1;77m'+'[>]'+'\033[0;97m'+' Complete the captcha and press ENTER: '+'\033[0m')
             htmlBody = browser.find_element_by_css_selector("body").get_attribute('innerHTML')
             soup = BeautifulSoup(htmlBody, 'html5lib')
 
