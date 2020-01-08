@@ -76,14 +76,6 @@ def main():
 
     banner()
 
-    # Ensure the usage of Python3
-    if sys.version_info[0] < 3:
-        B = '\033[1;31m'
-        W = '\033[0;97m'
-        E = '\033[0m'
-        print(B+"[-]"+W+" Phonia Toolkit must be run as Python3!"+E)
-        sys.exit()
-
     # If any param is passed, execute help command
     if not len(sys.argv) > 1:
         parser.print_help()
