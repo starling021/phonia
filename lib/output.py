@@ -62,7 +62,7 @@ def throw(string):
 
 def askForExit():
     if not args.output:
-        user_input = ask('Continue scanning? (y/N): ')
+        user_input = ask('\033[1;77m'+'[>]'+'\033[0m'+' Continue scanning? (y/N): '+'\033[0m')
 
         if user_input.lower() == 'y' or user_input.lower() == 'yes':
             return -1
