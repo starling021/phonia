@@ -76,7 +76,6 @@ apt-get -y install python3
 apt-get -y install python3-pip
 apt-get -y install wget
 apk update
-apk add pip
 apk add python3
 apk add py3-pip
 apk add wget
