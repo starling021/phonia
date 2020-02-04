@@ -7,14 +7,14 @@ from lib.args import args
 class Logger(object):
     def __init__(self):
         self.terminal = sys.stdout
-        out = args.output
+        out = args.outputfile
         import os
         import os.path
 
-        if args.output[0] != '/':
-            output = os.environ['OLDPWD']+'/'+args.output
+        if args.outputfile[0] != '/':
+            output = os.environ['OLDPWD']+'/'+args.outputfile
         else:
-            output = args.output
+            output = args.outputfile
             
         self.log = open(output, "a")
 
