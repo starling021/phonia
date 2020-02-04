@@ -45,6 +45,10 @@ from scanners.footprints import osintScan
 from scanners import recon
 
 def scanNumber(InputNumber):
+    os.system("clear")
+    print("")
+    os.system("cat banner/banner.txt")
+    print("")
     time.sleep(3)
     test("Fetching informations for {}...".format(formatNumber(InputNumber)))
     time.sleep(5)
@@ -75,8 +79,6 @@ def main():
     if not len(sys.argv) > 1:
         parser.print_help()
         sys.exit()
-
-    banner()
 
     if args.outputfile:
         sys.stdout = Logger()
