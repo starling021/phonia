@@ -4,10 +4,6 @@ import argparse
 import os
 from lib.banner import __version__
 
-print("")
-os.system("cat banner/banner.txt")
-print("")
-
 parser = argparse.ArgumentParser()
 
 parser.add_argument('-n', '--number', dest='number', type=str, help='The phone number to scan.')
