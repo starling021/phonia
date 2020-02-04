@@ -71,15 +71,12 @@ def main():
     scanners = ['any', 'all', 'numverify', 'ovh', 'footprints']
     
     if args.update:
+        import os
         os.system("chmod +x bin/phonia && bin/phonia -u")
         sys.exit()
 
     # If any param is passed, execute help command
     if not len(sys.argv) > 1:
-        print("")
-        import os
-        os.system("cat banner/banner.txt")
-        print("")
         parser.print_help()
         sys.exit()
 
