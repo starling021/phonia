@@ -76,6 +76,9 @@ def main():
 
     # If any param is passed, execute help command
     if not len(sys.argv) > 1:
+        print("")
+        os.system("cat banner/banner.txt")
+        print("")
         parser.print_help()
         sys.exit()
 
@@ -96,7 +99,7 @@ def main():
         import os
         import os.path
         
-        run = args.input
+        run = args.inputfile
    
         if os.path.exists(run):
             time.sleep(0)
@@ -109,6 +112,9 @@ def main():
         for line in run.readlines():
             scanNumber(line)
     else:
+        print("")
+        os.system("cat banner/banner.txt")
+        print("")
         parser.print_help()
         sys.exit()
 
