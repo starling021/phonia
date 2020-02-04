@@ -7,7 +7,7 @@ from lib.args import args
 class Logger(object):
     def __init__(self):
         self.terminal = sys.stdout
-        output = args.output
+        output = args.outputfile
         self.log = open(output, "a")
 
     def write(self, message):
