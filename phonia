@@ -109,6 +109,7 @@ def main():
         for line in run.readlines():
             scanNumber(line)
     else:
+        banner()
         parser.print_help()
         sys.exit()
 
