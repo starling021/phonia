@@ -7,52 +7,25 @@ from lib.args import args
 from lib.logger import Logger
 
 def plus(string):
-    if not args.no_ansi and not args.output:
-        print("%s[+]%s %s%s" % (G % 1, S, string, E))
-    else:
-        print("[+] %s" % (string))
-
+    print("%s[+]%s %s%s" % (G % 1, S, string, E))
 
 def warn(string):
-    if not args.no_ansi and not args.output:
-        print("%s[!]%s %s%s" % (Y % 1, S, string, E))
-    else:
-        print("[!] %s" % (string))
-
+    print("%s[!]%s %s%s" % (Y % 1, S, string, E))
 
 def error(string):
-    if not args.no_ansi and not args.output:
-        print("%s[-]%s %s%s" % (R % 1, S, string, E))
-    else:
-        print("[-] %s" % (string))
-
+    print("%s[-]%s %s%s" % (R % 1, S, string, E))
 
 def test(string):
-    if not args.no_ansi and not args.output:
-        print("%s[*]%s %s%s" % (B % 1, S, string, E))
-    else:
-        print("[*] %s" % (string))
-
+    print("%s[*]%s %s%s" % (B % 1, S, string, E))
 
 def info(string):
-    if not args.no_ansi and not args.output:
-        print("%s[i]%s %s%s" % (W % 1, S, string, E))
-    else:
-        print("[i] %s" % (string))
-
+    print("%s[i]%s %s%s" % (W % 1, S, string, E))
 
 def more(string):
-    if not args.no_ansi and not args.output:
-        print(" %s|%s  %s%s" % (W % 0, string, E))
-    else:
-        print(" | %s" % (string))
-
+    print(" %s|%s  %s%s" % (W % 0, string, E))
 
 def title(string):
-    if not args.no_ansi and not args.output:
-        print("%s%s%s%s" % (BOLD, Y % 1, string, E))
-    else:
-        print("%s" % (string))
+    print("%s%s%s%s" % (BOLD, Y % 1, string, E))
 
 
 def throw(string):
@@ -61,21 +34,17 @@ def throw(string):
 
 
 def askForExit():
-    if not args.output:
-        user_input = ask('\033[1;77m'+'[>]'+'\033[0m'+' Continue scanning? (y/N): '+'\033[0m')
+    user_input = ask('\033[1;77m'+'[>]'+'\033[0m'+' Continue scanning? (y/N): '+'\033[0m')
 
-        if user_input.lower() == 'y' or user_input.lower() == 'yes':
-            return -1
-        else:
-            info("Good bye!")
-            sys.exit()
+    if user_input.lower() == 'y' or user_input.lower() == 'yes':
+        return -1
+    else:
+        info("Good bye!")
+        sys.exit()
 
 def ask(text):
-    if args.output:
-        sys.stdout = sys.__stdout__
-        res = input(text)
-        sys.stdout = Logger()
+    sys.stdout = sys.__stdout__
+    res = input(text)
+    sys.stdout = Logger()
 
-        return res
-    else:
-        return input(text)
+    return res
