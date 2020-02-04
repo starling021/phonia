@@ -8,7 +8,7 @@ class Logger(object):
     def __init__(self):
         self.terminal = sys.stdout
         output = args.outputfile
-        self.log = open(output, "a")
+        self.log = open(str(output), "a")
 
     def write(self, message):
         self.terminal.write(message)
