@@ -74,12 +74,12 @@ def main():
         os.system("chmod +x bin/phonia && bin/phonia -u")
         sys.exit()
 
-    banner()
-
     # If any param is passed, execute help command
     if not len(sys.argv) > 1:
         parser.print_help()
         sys.exit()
+
+    banner()
 
     if args.outputfile:
         sys.stdout = Logger()
@@ -109,9 +109,6 @@ def main():
         for line in run.readlines():
             scanNumber(line)
     else:
-        print("")
-        os.system("cat banner/banner.txt")
-        print("")
         parser.print_help()
         sys.exit()
 
