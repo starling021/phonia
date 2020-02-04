@@ -81,7 +81,7 @@ def main():
         parser.print_help()
         sys.exit()
 
-    if args.output:
+    if args.outputfile:
         sys.stdout = Logger()
         
 
@@ -92,8 +92,8 @@ def main():
 
     if args.number:
         scanNumber(args.number)
-    elif args.input:
-        inp = args.input
+    elif args.inputfile:
+        inp = args.inputfile
         import os
         import os.path
         
@@ -116,8 +116,8 @@ def main():
         parser.print_help()
         sys.exit()
 
-    if args.output:
-        args.output.close()
+    if args.outputfile:
+        args.outputfile.close()
 
     closeBrowser()
 
