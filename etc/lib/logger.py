@@ -16,7 +16,7 @@ class Logger(object):
         else:
             output = args.outputfile
             
-        self.log = open(output, "a")
+        self.log = open(str(output), "a")
 
     def write(self, message):
         self.terminal.write(message)
