@@ -1,12 +1,6 @@
 # Phonia Toolkit
-                                                       
-                                           _|                            _|            
-                                 _|_|_|    _|_|_|      _|_|    _|_|_|          _|_|_|  
-                                 _|    _|  _|    _|  _|    _|  _|    _|  _|  _|    _|  
-                                 _|    _|  _|    _|  _|    _|  _|    _|  _|  _|    _|  
-                                 _|_|_|    _|    _|    _|_|    _|    _|  _|    _|_|_|  
-                                 _|                                                    
-                                 _|
+
+![phonia](https://user-images.githubusercontent.com/54115104/74106558-0679e800-4b79-11ea-8885-dcbfef10610b.jpeg)
 
 <p align="center">
   <a href="http://entynetproject.simplesite.com/">
