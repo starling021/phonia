@@ -179,7 +179,7 @@ def osintScan(numberObject, rerun=False):
 
     info('---- Web pages footprints ----')
 
-    test("Searching for footprints on web pages... (limit=10)")
+    test("Searching for footprints on web pages...")
     if customFormatting:
         req = '{} OR "{}" OR "{}" OR "{}"'.format(
             number, number, internationalNumber, customFormatting)
@@ -191,7 +191,7 @@ def osintScan(numberObject, rerun=False):
         plus("Result found: " + result)
 
     # Documents
-    info("Searching for documents... (limit=10)")
+    info("Searching for documents...")
     if customFormatting:
         req = '(ext:doc OR ext:docx OR ext:odt OR ext:pdf OR ext:rtf OR ext:sxw OR ext:psw OR ext:ppt OR ext:pptx OR ext:pps OR ext:csv OR ext:txt OR ext:xls) AND ("{}")'.format(
             customFormatting)
