@@ -59,18 +59,18 @@
 > phonia -h
 
 ```
-usage: phonia [-h] [-p PHONE] [-i INPUTFILE] [-o OUTPUTFILE] [-s SCANNER]
-              [--recon] [--no-ansi] [-u]
+usage: phonia [-h] [-p <phone>] [-i <inputfile>] [-o <outputfile>]
+              [-s <scanner>] [--recon] [--no-ansi] [-u]
 
 optional arguments:
   -h, --help            show this help message and exit
-  -p PHONE, --phone PHONE
+  -p <phone>, --phone <phone>
                         The phone number to scan.
-  -i INPUTFILE, --input INPUTFILE
+  -i <inputfile>, --input <inputfile>
                         List of phone numbers to scan.
-  -o OUTPUTFILE, --output OUTPUTFILE
+  -o <outputfile>, --output <outputfile>
                         Output to save scan results.
-  -s SCANNER, --scanner SCANNER
+  -s <scanner>, --scanner <scanner>
                         The scanner to use.
   --recon               Launch custom format reconnaissance.
   --no-ansi             Disable colored output.
