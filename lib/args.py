@@ -28,7 +28,7 @@ from lib.banner import __version__
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('-n', '--number', dest='number', type=str, help='The phone number to scan.')
+parser.add_argument('-p', '--phone', dest='phone', type=str, help='The phone number to scan.')
 
 parser.add_argument('-i', '--input', dest="inputfile", type=str, help='List of phone numbers to scan.')
 
