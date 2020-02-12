@@ -59,12 +59,12 @@
 > phonia -h
 
 ```
-usage: phonia [-h] [-n NUMBER] [-i INPUTFILE] [-o OUTPUTFILE] [-s SCANNER]
+usage: phonia [-h] [-p PHONE] [-i INPUTFILE] [-o OUTPUTFILE] [-s SCANNER]
               [--recon] [--no-ansi] [-u]
 
 optional arguments:
   -h, --help            show this help message and exit
-  -n NUMBER, --number NUMBER
+  -p PHONE, --phone PHONE
                         The phone number to scan.
   -i INPUTFILE, --input INPUTFILE
                         List of phone numbers to scan.
