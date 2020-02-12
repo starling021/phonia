@@ -83,7 +83,7 @@ optional arguments:
 
 > Example of the phonia basic scan
     
-    phonia -n 15554443333
+    phonia -n +15554443333
     
 > Example of the scanning from a file
 
@@ -91,7 +91,7 @@ optional arguments:
     
 > Example of the selecting number scanner
 
-    phonia -n 15554443333 -s footprints
+    phonia -n +15554443333 -s footprints
 
 ***
 
