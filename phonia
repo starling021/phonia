@@ -88,8 +88,8 @@ def main():
         throw(("Error: scanner doesn't exists!"))
         sys.exit()
 
-    if args.number:
-        scanNumber(args.number)
+    if args.phone:
+        scanNumber(args.phone)
     elif args.inputfile:
         import os
         import os.path
