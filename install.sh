@@ -112,8 +112,8 @@ xbps-install -y wget
 {
 rm config.py
 cp config.example.py config.py
-python -m pip install setuptools
-python -m pip install -r requirements.txt
+python3 -m pip install setuptools
+python3 -m pip install -r requirements.txt
 } &> /dev/null
 
 {
