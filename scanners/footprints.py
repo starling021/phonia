@@ -207,7 +207,7 @@ def osintScan(numberObject, rerun=False):
     plus('http://www.scamcallfighters.com/search-phone-{}.html'.format(number))
 
     tmpNumAsk = ask(
-        '\033[1;77m'+'[?]'+'\033[0m'+' Search for temporary number providers footprints? (Y/n): '+'\033[0m')
+        '\033[1;77m'+'[?]'+'\033[0m'+' Search for temporary number providers footprints? (y/N): '+'\033[0m')
 
     if tmpNumAsk.lower() != 'n' and tmpNumAsk.lower() != 'no':
         osintDisposableNumScan()
