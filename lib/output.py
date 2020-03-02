@@ -41,7 +41,7 @@ def test(string):
     print("%s[*]%s %s%s" % (B % 1, S, string, E))
 
 def info(string):
-    print("%s[i]%s %s%s" % (W % 1, S, string, E))
+    print("%s[*]%s %s%s" % (B % 1, S, string, E))
 
 def more(string):
     print(" %s|%s  %s%s" % (W % 0, string, E))
