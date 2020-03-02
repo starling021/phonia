@@ -64,7 +64,7 @@ def scanNumber(InputNumber):
     recon.scan(number)
     osintScan(number)
 
-    info("Scan finished.")
+    info("Scan completed.")
 
 
 def main():
