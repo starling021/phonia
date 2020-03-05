@@ -85,11 +85,11 @@ optional arguments:
     
     phonia -p 15554443333
     
-> Example of the scanning from a file
+> Example of scanning from a file
 
     phonia -i input.txt -o output.txt
     
-> Example of the selecting number scanner
+> Example of selecting a scanner
 
     phonia -p 15554443333 -s footprints
 
