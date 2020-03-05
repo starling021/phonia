@@ -81,7 +81,7 @@ optional arguments:
   
 # Phonia Toolkit examples
 
-> Example of the phonia basic scan
+> Example of scanning a phone number
     
     phonia -p 15554443333
     
