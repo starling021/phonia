@@ -129,7 +129,7 @@ def osintDisposableNumScan():
                 plus("Found a temporary number provider: tempophone.com")
                 askForExit()
     except Exception as e:
-        error("Unable to reach tempophone.com API.")
+        error("Unable to reach tempophone.com API!")
 
     dorks = json.load(open('osint/disposable_num_providers.json'))
 
@@ -170,7 +170,7 @@ def osintScan(numberObject, rerun=False):
             internationalNumber.replace('+', '').replace(' ', '-')))
 
         askingCustomPayload = ask(
-            '\033[1;77m'+'[?]'+'\033[0m'+' Do you want to use an additional format? (y/N): '+'\033[0m')
+            '\033[1;77m'+'[?]'+'\033[0m'+' Use an additional format? (y/N): '+'\033[0m')
 
     if rerun or askingCustomPayload == 'y' or askingCustomPayload == 'yes':
         info('We recommand: {} or {}'.format(internationalNumber,
@@ -207,7 +207,7 @@ def osintScan(numberObject, rerun=False):
     plus('http://www.scamcallfighters.com/search-phone-{}.html'.format(number))
 
     tmpNumAsk = ask(
-        '\033[1;77m'+'[?]'+'\033[0m'+' Do you want to search for number providers footprints? (y/N): '+'\033[0m')
+        '\033[1;77m'+'[?]'+'\033[0m'+' Search for number providers footprints? (y/N): '+'\033[0m')
 
     if tmpNumAsk.lower() != 'n' and tmpNumAsk.lower() != 'no':
         osintDisposableNumScan()
@@ -217,7 +217,7 @@ def osintScan(numberObject, rerun=False):
     osintIndividualScan()
 
     retry_input = ask(
-        '\033[1;77m'+'[?]'+'\033[0m'+' Do you want to rerun OSINT scan? (y/N): '+'\033[0m')
+        '\033[1;77m'+'[?]'+'\033[0m'+' Rerun OSINT scan? (y/N): '+'\033[0m')
 
     if retry_input.lower() == 'y' or retry_input.lower() == 'yes':
         osintScan(numberObj, True)
