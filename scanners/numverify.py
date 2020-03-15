@@ -83,7 +83,7 @@ def scan(number):
         return -1
 
     if data['valid'] == False:
-        error(("Error: Please specify a valid phone number."))
+        error(("Invalid phone number!"))
         sys.exit()
 
     InternationalNumber = '({}){}'.format(
