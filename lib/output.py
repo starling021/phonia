@@ -56,12 +56,11 @@ def throw(string):
 
 
 def askForExit():
-    user_input = ask('\033[1;77m'+'[?]'+'\033[0m'+' Do you want to continue scan? (y/N): '+'\033[0m')
+    user_input = ask('\033[1;77m'+'[?]'+'\033[0m'+' Continue scan? (y/N): '+'\033[0m')
 
     if user_input.lower() == 'y' or user_input.lower() == 'yes':
         return -1
     else:
-        info("Good bye!")
         sys.exit()
 
 def ask(text):
