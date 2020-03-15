@@ -69,7 +69,7 @@ def scan(InputNumber, print_results=True):
                 plus('Timezone: {}'.format(timezoneResult))
 
             if phonenumbers.is_possible_number(PhoneNumberObject):
-                info('The number is valid and possible.')
+                plus('The number is valid and possible!')
             else:
                 warn('The number is valid but might not be possible.')
 
