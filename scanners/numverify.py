@@ -40,7 +40,7 @@ def scan(number):
         res = send('GET', 'https://numverify.com/')
         soup = BeautifulSoup(res.text, "html5lib")
     except Exception as e:
-        error('Numverify.com is not available.')
+        error('Numverify.com is not available!')
         error(e)
         return -1
 
@@ -75,7 +75,7 @@ def scan(number):
         return -1
 
     if res.content == "Unauthorized" or res.status_code != 200:
-        error(("An error occured while calling the API (bad request or wrong api key)."))
+        error(("An error occured while calling the API!"))
         return -1
 
     if 'error' in data:
@@ -83,7 +83,7 @@ def scan(number):
         return -1
 
     if data['valid'] == False:
-        error(("Error: Please specify a valid phone number. Example: +6464806649"))
+        error(("Error: Please specify a valid phone number."))
         sys.exit()
 
     InternationalNumber = '({}){}'.format(
