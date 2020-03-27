@@ -81,17 +81,17 @@ optional arguments:
   
 # Phonia Toolkit examples
 
-> Example of scanning a phone number
+## Example of scanning a phone number
     
-    phonia -p 15554443333
+> phonia -p 15554443333
     
-> Example of scanning from a file
+## Example of scanning from a file
 
-    phonia -i input.txt -o output.txt
+> phonia -i input.txt -o output.txt
     
-> Example of selecting a scanner
+## Example of selecting a scanner
 
-    phonia -p 15554443333 -s footprints
+> phonia -p 15554443333 -s footprints
 
 ***
 
