@@ -22,7 +22,6 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# dependencies
 import os
 
 os.system("printf '\033]2;Phonia Toolkit\a'")
@@ -32,7 +31,6 @@ import signal
 import time
 # lib
 from lib.args import args,parser
-from lib.banner import banner, __version__
 from lib.output import *
 from lib.format import *
 from lib.logger import Logger
@@ -46,9 +44,9 @@ from scanners import recon
 
 def scanNumber(InputNumber):
     os.system("clear")
-    print("")
+    os.system("echo")
     os.system("cat banner/banner.txt")
-    print("")
+    os.system("echo")
     time.sleep(3)
     test("Fetching informations for {}...".format(formatNumber(InputNumber)))
     time.sleep(5)
