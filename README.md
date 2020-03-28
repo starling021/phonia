@@ -75,6 +75,7 @@ optional arguments:
   --recon               Launch custom format reconnaissance.
   --no-ansi             Disable colored output.
   -u, --update          Update Phonia Toolkit.
+  --version             Show Phonia Toolkit version.
 ```
 
 ***
