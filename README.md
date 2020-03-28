@@ -59,12 +59,11 @@
 > phonia -h
 
 ```
-usage: phonia [-h] [--version] [-p <phone>] [-i <inputfile>]
-              [-o <outputfile>] [-s <scanner>] [--recon] [--no-ansi] [-u]
+usage: phonia [-h] [-p <phone>] [-i <inputfile>] [-o <outputfile>]
+              [-s <scanner>] [--recon] [--no-ansi] [-u] [--version]
 
 optional arguments:
   -h, --help            show this help message and exit
-  --version             Show Phonia Toolkit version.
   -p <phone>, --phone <phone>
                         The phone number to scan.
   -i <inputfile>, --input <inputfile>
@@ -76,6 +75,7 @@ optional arguments:
   --recon               Launch custom format reconnaissance.
   --no-ansi             Disable colored output.
   -u, --update          Update Phonia Toolkit.
+  --version             Show Phonia Toolkit version.
 ```
 
 ***
