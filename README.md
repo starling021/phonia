@@ -60,7 +60,7 @@
 
 ```
 usage: phonia [-h] [-p <phone>] [-i <inputfile>] [-o <outputfile>]
-              [-s <scanner>] [--recon] [--no-ansi] [-u]
+              [-s <scanner>] [--recon] [--no-ansi] [-u] [--version]
 
 optional arguments:
   -h, --help            show this help message and exit
