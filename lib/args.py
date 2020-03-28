@@ -33,5 +33,6 @@ parser.add_argument('-s', '--scanner', metavar="<scanner>", dest="scanner", type
 parser.add_argument('--recon', action='store_true', help='Launch custom format reconnaissance.')
 parser.add_argument('--no-ansi', action='store_true', help='Disable colored output.')
 parser.add_argument('-u', '--update', action='store_true', help='Update Phonia Toolkit.')
+parser.add_argument('--version', action='store_true', help='Show Phonia Toolkit version.')
 
 args = parser.parse_args()
