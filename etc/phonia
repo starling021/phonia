@@ -82,6 +82,12 @@ def main():
 
     if args.outputfile:
         sys.stdout = Logger()
+
+    if args.version:
+        print("")
+        os.system("cat banner/banner.txt")
+        print("")
+        print("Phonia Toolkit v4.0")
         
     # Verify scanner option
     if not args.scanner in scanners:
