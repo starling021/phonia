@@ -48,7 +48,7 @@ def scanNumber(InputNumber):
     os.system("cat banner/banner.txt")
     os.system("echo")
     time.sleep(3)
-    test("Fetching informations for {}...".format(formatNumber(InputNumber)))
+    test("Fetching information for {}...".format(formatNumber(InputNumber)))
     time.sleep(5)
 
     number = localscan.scan(InputNumber)
@@ -75,6 +75,7 @@ def main():
         os.system("chmod +x bin/phonia && bin/phonia -u")
         sys.exit()
 
+    import sys
     # If any param is passed, execute help command
     if not len(sys.argv) > 1:
         parser.print_help()
