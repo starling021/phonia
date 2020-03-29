@@ -71,11 +71,9 @@ def main():
     scanners = ['any', 'all', 'numverify', 'ovh', 'footprints']
     
     if args.update:
-        import os
         os.system("chmod +x bin/phonia && bin/phonia -u")
         sys.exit()
 
-    import sys
     # If any param is passed, execute help command
     if not len(sys.argv) > 1:
         parser.print_help()
@@ -90,7 +88,6 @@ def main():
         os.system("cat banner/banner.txt")
         print("")
         print("Phonia Toolkit v4.0")
-        import sys
         sys.exit()
         
     # Verify scanner option
