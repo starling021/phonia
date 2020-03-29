@@ -84,7 +84,6 @@ def main():
 
     if args.version:
         print("")
-        import os
         os.system("cat banner/banner.txt")
         print("")
         print("Phonia Toolkit v4.0")
@@ -99,8 +98,6 @@ def main():
         scanNumber(args.phone)
     elif args.inputfile:
         inp = args.inputfile
-        import os
-        import os.path
         
         if inp[0] != '/':
             run = os.environ['OLDPWD']+'/'+inp
