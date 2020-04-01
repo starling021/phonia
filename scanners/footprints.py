@@ -172,7 +172,7 @@ def osintScan(numberObject, rerun=False):
         askingCustomPayload = ask(
             '\033[1;77m'+'[?]'+'\033[0m'+' Use an additional format? (y/N): '+'\033[0m')
 
-    if rerun or askingCustomPayload == 'y' or askingCustomPayload == 'yes':
+    if rerun or askingCustomPayload == 'y':
         info('We recommand: {} or {}'.format(internationalNumber,
                                              internationalNumber.replace(numberCountryCode + ' ', '')))
         customFormatting = ask('Custom format: ')
@@ -219,7 +219,7 @@ def osintScan(numberObject, rerun=False):
     retry_input = ask(
         '\033[1;77m'+'[?]'+'\033[0m'+' Rerun OSINT scan? (y/N): '+'\033[0m')
 
-    if retry_input.lower() == 'y' or retry_input.lower() == 'yes':
+    if retry_input.lower() == 'y':
         osintScan(numberObj, True)
     else:
         return -1
