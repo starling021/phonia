@@ -209,7 +209,7 @@ def osintScan(numberObject, rerun=False):
     tmpNumAsk = ask(
         '\033[1;77m'+'[?]'+'\033[0m'+' Search for number providers footprints? (y/N): '+'\033[0m')
 
-    if tmpNumAsk.lower() != 'n' and tmpNumAsk.lower() != 'no':
+    if tmpNumAsk.lower() != 'n':
         osintDisposableNumScan()
 
     osintSocialMediaScan()
