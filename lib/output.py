@@ -65,7 +65,7 @@ def askForExit():
 
 def ask(text):
     sys.stdout = sys.__stdout__
-    res = input(text).strip(" ").lower()
+    res = input(text).strip(" ")
     sys.stdout = Logger()
 
     return res
