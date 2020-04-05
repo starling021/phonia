@@ -26,7 +26,7 @@ N="\033[1;37m"
 C="\033[0m"
 
 CE="\033[0m"
-RS="\033[31m"
+RS="\033[1;31m"
 YS="\033[1;33m"
 BS="-e \033[1;34m[*]\033[0m "
 GNS="-e \033[1;32m[+]\033[0m "
@@ -40,6 +40,17 @@ if [[ $EUID -ne 0 ]]
 then
    sleep 1
    echo -e ""$RS"[-]"$WS" This script must be run as root!"$CE"" 1>&2
+   sleep 1
+   exit
+fi
+
+{
+ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
+} &> /dev/null
+if [[ "$ASESR" = "" ]]
+then 
+   sleep 1
+   echo -e ""$RS"[-] "$CE"No Internet connection!"$CE""
    sleep 1
    exit
 fi
