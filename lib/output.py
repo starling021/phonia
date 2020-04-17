@@ -56,7 +56,7 @@ def throw(string):
 
 
 def askForExit():
-    user_input = ask('\033[1;77m'+'[?]'+'\033[0m'+' Continue scan? (y/N): '+'\033[0m')
+    user_input = ask('\033[1;77m'+'[?]'+'\033[0m'+' Continue scan? (y/n): '+'\033[0m')
 
     if user_input.lower() == 'y':
         return -1

@@ -170,7 +170,7 @@ def osintScan(numberObject, rerun=False):
             internationalNumber.replace('+', '').replace(' ', '-')))
 
         askingCustomPayload = ask(
-            '\033[1;77m'+'[?]'+'\033[0m'+' Use an additional format? (y/N): '+'\033[0m')
+            '\033[1;77m'+'[?]'+'\033[0m'+' Use an additional format? (y/n): '+'\033[0m')
 
     if rerun or askingCustomPayload.lower() == 'y':
         info('We recommand: {} or {}'.format(internationalNumber,
@@ -207,9 +207,9 @@ def osintScan(numberObject, rerun=False):
     plus('http://www.scamcallfighters.com/search-phone-{}.html'.format(number))
 
     tmpNumAsk = ask(
-        '\033[1;77m'+'[?]'+'\033[0m'+' Search for number providers footprints? (y/N): '+'\033[0m')
+        '\033[1;77m'+'[?]'+'\033[0m'+' Search for number providers footprints? (y/n): '+'\033[0m')
 
-    if tmpNumAsk.lower() != 'n':
+    if tmpNumAsk.lower() == 'y':
         osintDisposableNumScan()
 
     osintSocialMediaScan()
@@ -217,7 +217,7 @@ def osintScan(numberObject, rerun=False):
     osintIndividualScan()
 
     retry_input = ask(
-        '\033[1;77m'+'[?]'+'\033[0m'+' Rerun OSINT scan? (y/N): '+'\033[0m')
+        '\033[1;77m'+'[?]'+'\033[0m'+' Rerun OSINT scan? (y/n): '+'\033[0m')
 
     if retry_input.lower() == 'y':
         osintScan(numberObj, True)
