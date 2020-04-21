@@ -33,7 +33,7 @@ class Logger(object):
         error = '\033[1;31m[-] \033[0m'
         
         output = args.outputfile
-        predir = os.path.split(output)
+        predir = os.path.split(output)[0]
         
         if os.path.exists(predir):
             if os.path.isdir(predir):
@@ -41,7 +41,7 @@ class Logger(object):
             else:
                 print(error+"Error: "+predir+": not a directory!")
         else:
-            print(error+"Local directort: "+predir+": does not exist!")
+            print(error+"Local directory: "+predir+": does not exist!")
 
     def write(self, message):
         self.terminal.write(message)
