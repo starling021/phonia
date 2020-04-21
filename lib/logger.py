@@ -29,8 +29,19 @@ from lib.args import args
 class Logger(object):
     def __init__(self):
         self.terminal = sys.stdout
+        
+        error = '\033[1;31m[-] \033[0m'
+        
         output = args.outputfile
-        self.log = open(str(output), "a")
+        predir = os.path.split(output)
+        
+        if os.path.exists(predir):
+            if os.path.isdir(predir):
+                self.log = open(str(output), "a")
+            else:
+                print(error+"Error: "+predir+": not a directory!")
+        else:
+            print(error+"Local directort: "+predir+": does not exist!")
 
     def write(self, message):
         self.terminal.write(message)
