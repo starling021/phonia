@@ -33,12 +33,22 @@ class Logger(object):
         import os
         import os.path
 
+        error = '\033[1;31m[-] \033[0m'
+        
         if args.outputfile[0] != '/':
             output = os.environ['OLDPWD']+'/'+args.outputfile
         else:
             output = args.outputfile
             
-        self.log = open(str(output), "a")
+        predir = os.path.split(output)
+        
+        if os.path.exists(predir):
+            if os.path.isdir(predir):
+                self.log = open(str(output), "a")
+            else:
+                print(error+"Error: "+predir+": not a directory!")
+        else:
+            print(error+"Local directory: "+predir+": does not exist!")
 
     def write(self, message):
         self.terminal.write(message)
