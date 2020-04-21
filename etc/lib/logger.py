@@ -40,7 +40,7 @@ class Logger(object):
         else:
             output = args.outputfile
             
-        predir = os.path.split(output)
+        predir = os.path.split(output)[0]
         
         if os.path.exists(predir):
             if os.path.isdir(predir):
