@@ -91,7 +91,7 @@ def main():
 
     # Verify scanner option
     if not args.scanner in scanners:
-        throw(("Scanner is not found!"))
+        throw(("Scanner: "+args.scanner+": does not exist!"))
         sys.exit()
 
     if args.phone:
@@ -103,7 +103,7 @@ def main():
         if os.path.exists(run):
             time.sleep(0)
         else:
-            throw(("File is not found!"))
+            throw(("Local File: "+run+": does not exist!"))
             sys.exit()
 
         run = open(run)
