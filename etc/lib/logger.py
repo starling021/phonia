@@ -47,9 +47,11 @@ class Logger(object):
                 self.log = open(str(output), "a")
             else:
                 print(error+"Error: "+predir+": not a directory!")
+                sys.exit()
         else:
             print(error+"Local directory: "+predir+": does not exist!")
-
+            sys.exit()
+            
     def write(self, message):
         self.terminal.write(message)
         self.log.write(message)
