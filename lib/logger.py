@@ -33,7 +33,7 @@ class Logger(object):
         error = '\033[1;31m[-] \033[0m'
         
         output = args.outputfile
-        predir = os.path.split(output)[0]
+        predir = os.path.split(str(output))[0]
         
         if os.path.exists(predir):
             if os.path.isdir(predir):
