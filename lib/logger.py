@@ -32,18 +32,28 @@ class Logger(object):
         
         error = '\033[1;31m[-] \033[0m'
         
-        output = args.outputfile
-        predir = os.path.split(str(output))[0]
+        if str(args.outputfile) != "":
+            if str(args.outputfile)[0] != '/':
+                output = os.getcwd() + '/' + str(args.outputfile)
+            else
+                output = str(args.outputfile)
+            
+            predir = os.path.split(str(output))[0]
         
-        if os.path.exists(predir):
-            if os.path.isdir(predir):
-                self.log = open(str(output), "a")
+            if os.path.exists(predir):
+                if os.path.isdir(predir):
+                    if os.path.isdir(str(output)):
+                        print(error+"Error: "+str(output))+": is a directory!")
+                    else:
+                        self.log = open(str(output), "a")
+                else:
+                    print(error+"Error: "+predir+": not a directory!")
+                    sys.exit()
             else:
-                print(error+"Error: "+predir+": not a directory!")
+                print(error+"Local directory: "+predir+": does not exist!")
                 sys.exit()
         else:
-            print(error+"Local directory: "+predir+": does not exist!")
-            sys.exit()
+            pass
 
     def write(self, message):
         self.terminal.write(message)
