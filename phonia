@@ -98,10 +98,7 @@ def main():
         scanNumber(args.phone)
 
     elif args.inputfile:
-        if args.inputfile[0] != '/':
-            run = os.getcwd() + '/' + args.inputfile
-        else:
-            run = args.inputfile
+        run = args.inputfile
    
         if os.path.exists(run):
             if os.path.isdir(run):
