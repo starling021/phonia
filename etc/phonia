@@ -98,20 +98,25 @@ def main():
         scanNumber(args.phone)
         
     elif args.inputfile:
-        if args.inputfile[0] != '/':
-            run = os.environ['OLDPWD'] + '/' + args.inputfile
-        else:
-            run = args.inputfile
+        run = args.inputfile
    
+        w = os.environ['OLDPWD']
+        os.chdir(w)
         if os.path.exists(run):
             if os.path.isdir(run):
                 throw(("Error: "+run+": is a directory!"))
+                g = os.environ['HOME']
+    	        os.chdir(g + "/phonia")
                 sys.exit()
         else:
             throw(("Local File: "+run+": does not exist!"))
+            g = os.environ['HOME']
+    	    os.chdir(g + "/phonia")
             sys.exit()
 
         run = open(run)
+        g = os.environ['HOME']
+    	os.chdir(g + "/phonia")
 
         for line in run.readlines():
             scanNumber(line)
