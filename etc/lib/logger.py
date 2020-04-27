@@ -48,7 +48,7 @@ class Logger(object):
 	        else:
 	            print(error+"Local directory: "+outputfile+": does not exist!")
 		    g = os.environ['HOME']
-    	    	    os.chdir(g + "/mouse")
+    	    	    os.chdir(g + "/phonia")
                     sys.exit()
             else:
 	        direct = os.path.split(path)[0]
@@ -62,15 +62,15 @@ class Logger(object):
                     else:
                         print(error+"Error: "+direct+": not a directory!")
 			g = os.environ['HOME']
-    	    	    	os.chdir(g + "/mouse")
+    	    	    	os.chdir(g + "/phonia")
                         sys.exit()
 	        else:
 	            print(error+"Local directory: "+direct+": does not exist!")
 		    g = os.environ['HOME']
-    	    	    os.chdir(g + "/mouse")
+    	    	    os.chdir(g + "/phonia")
                     sys.exit()
 	    g = os.environ['HOME']
-    	    os.chdir(g + "/mouse")
+    	    os.chdir(g + "/phonia")
         else:
             pass
             
