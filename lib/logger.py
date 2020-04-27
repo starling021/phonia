@@ -47,7 +47,7 @@ class Logger(object):
 	            print(error+"Local directory: "+outputfile+": does not exist!")
                     sys.exit()
             else:
-	        direct = os.path.split(path)[0]
+	        direct = os.path.split(outputfile)[0]
                 if direct == "":
                     direct = "."
                 else:
