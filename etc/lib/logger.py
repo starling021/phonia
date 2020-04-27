@@ -33,8 +33,10 @@ class Logger(object):
         error = '\033[1;31m[-] \033[0m'
         
         outputfile = str(args.outputfile)
-        
+	
         if outputfile != "":
+	    w = os.environ['OLDPWD']
+    	    os.chdir(w)
             if os.path.isdir(outputfile):
 	        if os.path.exists(outputfile):
 	            if outputfile[-1:] == "/":
@@ -45,6 +47,8 @@ class Logger(object):
                         self.log = open(outputfile), "a")
 	        else:
 	            print(error+"Local directory: "+outputfile+": does not exist!")
+		    g = os.environ['HOME']
+    	    	    os.chdir(g + "/mouse")
                     sys.exit()
             else:
 	        direct = os.path.split(path)[0]
@@ -57,10 +61,16 @@ class Logger(object):
                         self.log = open(outputfile), "a")
                     else:
                         print(error+"Error: "+direct+": not a directory!")
+			g = os.environ['HOME']
+    	    	    	os.chdir(g + "/mouse")
                         sys.exit()
 	        else:
 	            print(error+"Local directory: "+direct+": does not exist!")
+		    g = os.environ['HOME']
+    	    	    os.chdir(g + "/mouse")
                     sys.exit()
+	    g = os.environ['HOME']
+    	    os.chdir(g + "/mouse")
         else:
             pass
             
