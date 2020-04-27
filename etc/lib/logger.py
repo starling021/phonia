@@ -32,26 +32,35 @@ class Logger(object):
         
         error = '\033[1;31m[-] \033[0m'
         
-        if str(args.outputfile) != "":
-            if str(args.outputfile)[0] != '/':
-                output = os.environ['OLDPWD'] + '/' + str(args.outputfile)
-            else
-                output = str(args.outputfile)
-            
-            predir = os.path.split(str(output))[0]
+        outputfile = str(args.outputfile)
         
-            if os.path.exists(predir):
-                if os.path.isdir(predir):
-                    if os.path.isdir(str(output)):
-                        print(error+"Error: "+str(output))+": is a directory!")
+        if outputfile != "":
+            if os.path.isdir(outputfile):
+	        if os.path.exists(outputfile):
+	            if outputfile[-1:] == "/":
+                        outputfile = outputfile + 'output.txt'
+                        self.log = open(outputfile), "a")
                     else:
-                        self.log = open(str(output), "a")
-                else:
-                    print(error+"Error: "+predir+": not a directory!")
+                        outputfile = outputfile + '/output.txt'
+                        self.log = open(outputfile), "a")
+	        else:
+	            print(error+"Local directory: "+outputfile+": does not exist!")
                     sys.exit()
             else:
-                print(error+"Local directory: "+predir+": does not exist!")
-                sys.exit()
+	        direct = os.path.split(path)[0]
+                if direct == "":
+                    direct = "."
+                else:
+                    pass
+	        if os.path.exists(direct):
+                    if os.path.isdir(direct):
+                        self.log = open(outputfile), "a")
+                    else:
+                        print(error+"Error: "+direct+": not a directory!")
+                        sys.exit()
+	        else:
+	            print(error+"Local directory: "+direct+": does not exist!")
+                    sys.exit()
         else:
             pass
             
