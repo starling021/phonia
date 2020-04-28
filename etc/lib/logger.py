@@ -35,42 +35,42 @@ class Logger(object):
         outputfile = str(args.outputfile)
 	
         if outputfile != "":
-	    w = os.environ['OLDPWD']
-    	    os.chdir(w)
+            w = os.environ['OLDPWD']
+            os.chdir(w)
             if os.path.isdir(outputfile):
-	        if os.path.exists(outputfile):
-	            if outputfile[-1:] == "/":
+                if os.path.exists(outputfile):
+                    if outputfile[-1:] == "/":
                         outputfile = outputfile + 'output.txt'
                         self.log = open(outputfile, "a")
                     else:
                         outputfile = outputfile + '/output.txt'
                         self.log = open(outputfile, "a")
-	        else:
-	            print(error+"Local directory: "+outputfile+": does not exist!")
-		    g = os.environ['HOME']
-    	    	    os.chdir(g + "/phonia")
+               else:
+                    print(error+"Local directory: "+outputfile+": does not exist!")
+                    g = os.environ['HOME']
+                    os.chdir(g + "/phonia")
                     sys.exit()
             else:
-	        direct = os.path.split(outputfile)[0]
+                direct = os.path.split(outputfile)[0]
                 if direct == "":
                     direct = "."
                 else:
                     pass
-	        if os.path.exists(direct):
+                if os.path.exists(direct):
                     if os.path.isdir(direct):
                         self.log = open(outputfile, "a")
                     else:
                         print(error+"Error: "+direct+": not a directory!")
-			g = os.environ['HOME']
-    	    	    	os.chdir(g + "/phonia")
+                        g = os.environ['HOME']
+                        os.chdir(g + "/phonia")
                         sys.exit()
-	        else:
-	            print(error+"Local directory: "+direct+": does not exist!")
-		    g = os.environ['HOME']
-    	    	    os.chdir(g + "/phonia")
+                else:
+                    print(error+"Local directory: "+direct+": does not exist!")
+                    g = os.environ['HOME']
+                    os.chdir(g + "/phonia")
                     sys.exit()
-	    g = os.environ['HOME']
-    	    os.chdir(g + "/phonia")
+            g = os.environ['HOME']
+            os.chdir(g + "/phonia")
         else:
             pass
             
