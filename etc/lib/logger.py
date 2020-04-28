@@ -45,7 +45,7 @@ class Logger(object):
                     else:
                         outputfile = outputfile + '/output.txt'
                         self.log = open(outputfile, "a")
-               else:
+                else:
                     print(error+"Local directory: "+outputfile+": does not exist!")
                     g = os.environ['HOME']
                     os.chdir(g + "/phonia")
