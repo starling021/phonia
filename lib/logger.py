@@ -36,30 +36,30 @@ class Logger(object):
         
         if outputfile != "":
             if os.path.isdir(outputfile):
-	        if os.path.exists(outputfile):
-	            if outputfile[-1:] == "/":
+                if os.path.exists(outputfile):
+                    if outputfile[-1:] == "/":
                         outputfile = outputfile + 'output.txt'
                         self.log = open(outputfile, "a")
                     else:
                         outputfile = outputfile + '/output.txt'
                         self.log = open(outputfile, "a")
-	        else:
-	            print(error+"Local directory: "+outputfile+": does not exist!")
+                else:
+                    print(error+"Local directory: "+outputfile+": does not exist!")
                     sys.exit()
             else:
-	        direct = os.path.split(outputfile)[0]
+                direct = os.path.split(outputfile)[0]
                 if direct == "":
                     direct = "."
                 else:
                     pass
-	        if os.path.exists(direct):
+                if os.path.exists(direct):
                     if os.path.isdir(direct):
                         self.log = open(outputfile, "a")
                     else:
                         print(error+"Error: "+direct+": not a directory!")
                         sys.exit()
-	        else:
-	            print(error+"Local directory: "+direct+": does not exist!")
+                else:
+                    print(error+"Local directory: "+direct+": does not exist!")
                     sys.exit()
         else:
             pass
