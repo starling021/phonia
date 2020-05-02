@@ -65,7 +65,7 @@ def scanNumber(InputNumber):
     A = '\033[1;33m'
     W = '\033[0m'
     E = '\033[0m'
-    print(A+'\n[!]'+W+' Scan completed.'+E)
+    print(A+'[!]'+W+' Scan completed.'+E)
 
 def main():
     scanners = ['any', 'all', 'numverify', 'ovh', 'footprints']
