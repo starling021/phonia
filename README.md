@@ -61,7 +61,7 @@ any international phone numbers with a very good accuracy.
 > phonia -h
 
 ```
-usage: phonia [-h] [-p <phone>] [-i <inputfile>] [-o <outputfile>]
+usage: phonia [-h] [-p <phone>] [-i <input_file>] [-o <output_path>]
               [-s <scanner>] [--recon] [--no-ansi] [-u] [--version]
 
 optional arguments:
