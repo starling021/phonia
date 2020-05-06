@@ -46,7 +46,7 @@ class Logger(object):
                         outputfile = outputfile + '/output.txt'
                         self.log = open(outputfile, "a")
                 else:
-                    print(error+"Local directory: "+outputfile+": does not exist!")
+                    print(error+"Output directory: "+outputfile+": does not exist!")
                     g = os.environ['HOME']
                     os.chdir(g + "/phonia")
                     sys.exit()
@@ -65,7 +65,7 @@ class Logger(object):
                         os.chdir(g + "/phonia")
                         sys.exit()
                 else:
-                    print(error+"Local directory: "+direct+": does not exist!")
+                    print(error+"Output directory: "+direct+": does not exist!")
                     g = os.environ['HOME']
                     os.chdir(g + "/phonia")
                     sys.exit()
