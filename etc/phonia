@@ -109,7 +109,7 @@ def main():
                 os.chdir(g + "/phonia")
                 sys.exit()
         else:
-            throw(("Local File: "+run+": does not exist!"))
+            throw(("Input File: "+run+": does not exist!"))
             g = os.environ['HOME']
             os.chdir(g + "/phonia")
             sys.exit()
