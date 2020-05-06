@@ -68,9 +68,9 @@ optional arguments:
   -h, --help            show this help message and exit
   -p <phone>, --phone <phone>
                         The phone number to scan.
-  -i <inputfile>, --input <inputfile>
+  -i <input_file>, --input <input_file>
                         List of phone numbers to scan.
-  -o <outputfile>, --output <outputfile>
+  -o <output_path>, --output <output_path>
                         Output to save scan results.
   -s <scanner>, --scanner <scanner>
                         The scanner to use.
