@@ -105,7 +105,7 @@ def main():
                 throw(("Error: "+run+": is a directory!"))
                 sys.exit()
         else:
-            throw(("Input File: "+run+": does not exist!"))
+            throw(("Input file: "+run+": does not exist!"))
             sys.exit()
 
         run = open(run)
