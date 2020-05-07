@@ -37,7 +37,7 @@ class Logger(object):
         if outputfile != "":
             if os.path.isdir(outputfile):
                 if os.path.exists(outputfile):
-                    if outputfile[-1:] == "/":
+                    if outputfile[-1] == "/":
                         outputfile = outputfile + 'output.txt'
                         self.log = open(outputfile, "a")
                     else:
