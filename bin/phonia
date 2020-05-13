@@ -56,7 +56,7 @@ ASESR="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
 } &> /dev/null
 if [[ "$ASESR" != 0 ]]
 then 
-   echo -e ""$RS"No Internet connection!"$CE""
+   echo ""$RS"No Internet connection!"$CE""
    exit
 fi
 if [[ $EUID -ne 0 ]]
