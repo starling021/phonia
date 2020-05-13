@@ -55,21 +55,10 @@ then
    exit
 fi
 
-if [[ -d ~/phonia ]]
-then
-sleep 0
-else
-cd ~
-{
-git clone https://github.com/entynetproject/phonia.git
-} &> /dev/null
-fi
-
 sleep 0.5
 clear
 sleep 0.5
-echo  
-cd ~/phonia
+echo
 cat banner/banner.txt
 echo
 
@@ -120,6 +109,16 @@ xbps-install -y python3-pip
 xbps-install -y wget
 } &> /dev/null
 
+if [[ -d ~/phonia ]]
+then
+sleep 0
+else
+cd ~
+{
+git clone https://github.com/entynetproject/phonia.git
+} &> /dev/null
+fi
+
 {
 rm config.py
 cp config.example.py config.py
@@ -146,7 +145,7 @@ fi
 } &> /dev/null
 
 {
-cd ~/phonia/bin
+cd bin
 cp phonia /usr/local/bin
 chmod +x /usr/local/bin/phonia
 cp phonia /bin
