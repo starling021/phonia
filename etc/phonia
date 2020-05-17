@@ -29,18 +29,17 @@ os.system("printf '\033]2;Phonia Toolkit\a'")
 import sys
 import signal
 import time
-# lib
-from lib.args import args,parser
+from lib.args import args
+from lib.args import parser
 from lib.output import *
 from lib.format import *
 from lib.logger import Logger
 from lib.googlesearch import closeBrowser
-# scanners
-from scanners import numverify
-from scanners import localscan
-from scanners import ovh
+import scanners.numverify as numverify
+import scanners.localscan as localscan
+import scanners.recon as recon
+import scanners.ovh as ovh
 from scanners.footprints import osintScan
-from scanners import recon
 
 def scanNumber(InputNumber):
     os.system("clear")
