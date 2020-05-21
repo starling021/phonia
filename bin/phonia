@@ -22,16 +22,11 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-#blue start 
-	BS="-e \033[1;34m[*]\033[0m "
-#color end
-	CE="\033[0m"
-#red start
-	RS="-e \033[1;31m[-]\033[0m "
-#green start
-	GNS="-e \033[1;32m[+]\033[0m "
-
 printf '\033]2;Phonia Toolkit\a'
+
+G="\033[1;34m[*] \033[0m"
+S="\033[1;32m[+] \033[0m"
+E="\033[1;31m[-] \033[0m"
 
 if [[ "$1" = "-u" || "$1" = "--update" ]]
 then
@@ -56,16 +51,16 @@ ASESR="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
 } &> /dev/null
 if [[ "$ASESR" != 0 ]]
 then 
-   echo ""$RS"No Internet connection!"$CE""
+   echo ""$E"No Internet connection!"
    exit
 fi
 if [[ $EUID -ne 0 ]]
 then
-echo ""$RS"Permission denied!"$CE""
+echo ""$E"Permission denied!"
 exit
 fi
 sleep 1
-echo ""$BS"Installing update..."$CE""
+echo ""$G"Installing update..."
 {
 rm -rf ~/phonia
 rm /bin/phonia
@@ -82,7 +77,7 @@ chmod +x install.sh
 ./install.sh
 fi
 } &> /dev/null
-echo ""$GNS"Successfully updated!"$CE""
+echo ""$S"Successfully updated!"
 sleep 1
 exit
 fi
