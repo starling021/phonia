@@ -51,16 +51,16 @@ ASESR="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
 } &> /dev/null
 if [[ "$ASESR" != 0 ]]
 then 
-   echo ""$E"No Internet connection!"
+   echo -e ""$E"No Internet connection!"
    exit
 fi
 if [[ $EUID -ne 0 ]]
 then
-echo ""$E"Permission denied!"
+echo -e ""$E"Permission denied!"
 exit
 fi
 sleep 1
-echo ""$G"Installing update..."
+echo -e ""$G"Installing update..."
 {
 rm -rf ~/phonia
 rm /bin/phonia
@@ -77,7 +77,7 @@ chmod +x install.sh
 ./install.sh
 fi
 } &> /dev/null
-echo ""$S"Successfully updated!"
+echo -e ""$S"Successfully updated!"
 sleep 1
 exit
 fi
@@ -114,9 +114,9 @@ rm -rf etc/.disabled
 } &> /dev/null
 else
 {
-ASESR="$( curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' )"
+ASESR="$(ping -c 1 -q www.google.com >&/dev/null; echo $?)"
 } &> /dev/null
-if [[ "$ASESR" != "" ]]
+if [[ "$ASESR" = 0 ]]
 then 
 cd ~
 {
