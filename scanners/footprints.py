@@ -46,8 +46,8 @@ def osintIndividualScan():
     info('---- Phone books footprints ----')
 
     if numberCountryCode == '+1':
-        info("Generating URL on True People... ")
-        plus('https://www.truepeoplesearch.com/results?phoneno={}'.format(
+        test("Generating URL on True People... ")
+        info('https://www.truepeoplesearch.com/results?phoneno={}'.format(
             internationalNumber.replace(' ', '')))
 
     dorks = json.load(open('osint/individuals.json'))
@@ -63,7 +63,7 @@ def osintIndividualScan():
             test("Searching for footprints on {}...".format(dork['site']))
 
             for result in search(dorkRequest, stop=dork['stop']):
-                plus("URL: " + result)
+                info("URL: " + result)
         else:
             return -1
 
@@ -87,7 +87,7 @@ def osintReputationScan():
 
         test("Searching for {}...".format(dork['title']))
         for result in search(dorkRequest, stop=dork['stop']):
-            plus("URL: " + result)
+            info("URL: " + result)
 
 
 def osintSocialMediaScan():
@@ -110,7 +110,7 @@ def osintSocialMediaScan():
         test("Searching for footprints on {}...".format(dork['site']))
 
         for result in search(dorkRequest, stop=dork['stop']):
-            plus("URL: " + result)
+            info("URL: " + result)
 
 
 def osintDisposableNumScan():
@@ -126,7 +126,7 @@ def osintDisposableNumScan():
         data = json.loads(response.content.decode('utf-8'))
         for voip_number in data['objects']:
             if voip_number['phone'] == formatNumber(number):
-                plus("Found a temporary number provider: tempophone.com")
+                plus("Found a temporary number provider: tempophone.com!")
                 askForExit()
     except Exception as e:
         error("Unable to reach tempophone.com API!")
@@ -139,8 +139,8 @@ def osintDisposableNumScan():
         test("Searching for footprints on {}...".format(dork['site']))
 
         for result in search(dorkRequest, stop=dork['stop']):
-            plus("Result found: {}".format(dork['site']))
-            plus("URL: " + result)
+            plus("Result found: {}!".format(dork['site']))
+            info("URL: " + result)
             askForExit()
 
 
@@ -166,7 +166,7 @@ def osintScan(numberObject, rerun=False):
     if not rerun:
         # Whitepages
         test("Generating scan URL on 411.com...")
-        plus("Scan URL: https://www.411.com/phone/{}".format(
+        info("Scan URL: https://www.411.com/phone/{}".format(
             internationalNumber.replace('+', '').replace(' ', '-')))
 
         askingCustomPayload = ask(
@@ -188,7 +188,7 @@ def osintScan(numberObject, rerun=False):
             number, number, internationalNumber)
 
     for result in search(req, stop=10):
-        plus("Result found: " + result)
+        plus("Result found: " + result + "!")
 
     # Documents
     info("Searching for documents...")
@@ -199,12 +199,12 @@ def osintScan(numberObject, rerun=False):
         req = '(ext:doc OR ext:docx OR ext:odt OR ext:pdf OR ext:rtf OR ext:sxw OR ext:psw OR ext:ppt OR ext:pptx OR ext:pps OR ext:csv OR ext:txt OR ext:xls) AND ("{}" OR "{}")'.format(
             internationalNumber, localNumber)
     for result in search(req, stop=10):
-        plus("Result found: " + result)
+        plus("Result found: " + result + "!")
 
     osintReputationScan()
 
     test("Generating URL on scamcallfighters.com...")
-    plus('http://www.scamcallfighters.com/search-phone-{}.html'.format(number))
+    info('http://www.scamcallfighters.com/search-phone-{}.html'.format(number))
 
     tmpNumAsk = ask(
         '\033[1;77m'+'[?]'+'\033[0m'+' Search for number providers footprints? (y/n): '+'\033[0m')

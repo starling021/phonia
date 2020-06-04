@@ -103,4 +103,4 @@ def scan(number):
     for format in formats:
         info('Footprint reconnaissance for %s' % (format))
         for result in search('"%s"' % (format), stop=5):
-            plus("URL: " + result)
+            info("URL: " + result)

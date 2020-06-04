@@ -52,10 +52,10 @@ def scan(localNumber, numberCountry):
 
         for voip_number in data:
             if voip_number['number'] == askedNumber:
-                plus(("1 result found in OVH database"))
-                plus(("Number range: {}".format(voip_number['number'])))
-                plus(("City: {}".format(voip_number['city'])))
-                plus(("Zip code: {}".format(
+                plus(("One result found in OVH database!"))
+                info(("Number range: {}".format(voip_number['number'])))
+                info(("City: {}".format(voip_number['city'])))
+                info(("Zip code: {}".format(
                     voip_number['zipCode'] if voip_number['zipCode'] is not None else ''
                 )))
                 askForExit()

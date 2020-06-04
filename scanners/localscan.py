@@ -60,13 +60,13 @@ def scan(InputNumber, print_results=True):
         carrierName = carrier.name_for_number(PhoneNumberObject, 'en')
 
         if print_results:
-            plus('International format: {}'.format(internationalNumber))
-            plus('Local format: {}'.format(localNumber))
-            plus('Country found: {} ({})'.format(country, numberCountryCode))
-            plus('City/Area: {}'.format(location))
-            plus('Carrier: {}'.format(carrierName))
+            info('International format: {}'.format(internationalNumber))
+            info('Local format: {}'.format(localNumber))
+            info('Country found: {} ({})'.format(country, numberCountryCode))
+            info('City/Area: {}'.format(location))
+            info('Carrier: {}'.format(carrierName))
             for timezoneResult in timezone.time_zones_for_number(PhoneNumberObject):
-                plus('Timezone: {}'.format(timezoneResult))
+                info('Timezone: {}'.format(timezoneResult))
 
             if phonenumbers.is_possible_number(PhoneNumberObject):
                 plus('The number is valid and possible!')
