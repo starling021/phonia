@@ -58,7 +58,12 @@ any international phone numbers with a very good accuracy.
 
 # Phonia Toolkit execution
 
-> phonia -h
+```
+To run Phonia Toolkit you should 
+execute the following command.
+```
+
+> phonia
 
 ```
 usage: phonia [-h] [-p <phone>] [-i <input_file>] [-o <output_path>]
