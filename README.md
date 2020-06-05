@@ -74,9 +74,9 @@ optional arguments:
   -p <phone>, --phone <phone>
                         The phone number to scan.
   -i <input_file>, --input <input_file>
-                        List of phone numbers to scan.
+                        List of phone numbers.
   -o <output_path>, --output <output_path>
-                        Output to save scan results.
+                        Output to the specified path.
   -s <scanner>, --scanner <scanner>
                         The scanner to use.
   --recon               Launch custom format reconnaissance.
