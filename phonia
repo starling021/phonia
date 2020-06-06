@@ -61,10 +61,10 @@ def scanNumber(InputNumber):
     recon.scan(number)
     osintScan(number)
 
-    A = '\033[1;33m'
+    A = '\033[1;77m'
     W = '\033[0m'
     E = '\033[0m'
-    print(A+'[!]'+W+' Scan completed.'+E)
+    print(A+'[i]'+W+' Scan completed.'+E)
 
 def main():
     scanners = ['any', 'all', 'numverify', 'ovh', 'footprints']
@@ -125,7 +125,7 @@ def signal_handler(signal, frame):
     A = '\033[1;33m'
     W = '\033[0m'
     E = '\033[0m'
-    print(A+'\n[!]'+W+' Scan completed.'+E)
+    print(A+'\n[!]'+W+' Scan terminated.'+E)
 
     closeBrowser()
 
