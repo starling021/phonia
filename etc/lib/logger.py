@@ -78,6 +78,9 @@ class Logger(object):
         self.terminal.write(message)
         self.log.write(message)
 
+    def close_file(self):
+        self.log.close()
+
     def flush(self):
         # this flush method is needed for python 3 compatibility.
         # this handles the flush command by doing nothing.
