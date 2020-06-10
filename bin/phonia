@@ -139,6 +139,11 @@ mv etc/lib/logger.py ~/phonia/lib
 cp etc/.disabled/logger.py etc/lib
 rm -rf etc/.disabled
 } &> /dev/null
+if [[ ! -d ~/phonia ]]
+then
+   echo -e ""$E"Execution failed!"
+   exit
+fi
 chmod +x phonia
 ./phonia $1 $2 $3 $4 $5 $6 $7 $8 $9
 {
