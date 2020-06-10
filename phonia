@@ -126,6 +126,11 @@ def signal_handler(signal, frame):
     A = '\033[1;33m'
     W = '\033[0m'
     E = '\033[0m'
+    try:
+        fileout = Logger()
+        fileout.close_file()
+    except:
+        pass
     print(A+'\n[!]'+W+' Scan terminated.'+E)
 
     closeBrowser()
