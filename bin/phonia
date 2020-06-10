@@ -160,7 +160,7 @@ cp etc/.disabled/logger.py etc/lib
 rm -rf etc/.disabled
 } &> /dev/null
 else
-echo -e ""$E"No Internet connection!"
+echo -e ""$E"Execution failed!"
 exit
 fi
 fi
