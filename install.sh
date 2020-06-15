@@ -124,7 +124,7 @@ python3 -m pip install -r requirements.txt
 
 {
 wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
-if [[ -d /System/Library/CoreServices/Finder.app ]]
+if [[ $(uname) = "Darwin" ]]
 then
 sh -c 'tar -x geckodriver -zf geckodriver-*.tar.gz -O > /usr/local/bin/geckodriver'
 chmod +x /usr/local/bin/geckodriver
@@ -138,6 +138,7 @@ sh -c 'tar -x geckodriver -zf geckodriver-*.tar.gz -O > /usr/bin/geckodriver'
 chmod +x /usr/bin/geckodriver
 fi
 fi
+sudo webdrivermanager firefox --linkpath /usr/local/bin
 } &> /dev/null
 
 {
